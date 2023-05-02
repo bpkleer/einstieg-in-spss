@@ -1,0 +1,67 @@
+---
+title: "Multivariate lineare Regression"  # Titel der Seite
+weight: 201  # Individuelles Gewicht 
+menuTitle: "Multivariates Beispiel" # Falls Titel zulang ist, hier Kurztitel
+tags: ["regression", "multivariat"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+In der Regel berechnen wir keine bivariaten Modell in den Sozialwissenschaften, da Ursache-Wirkungs-Relationen in sozialen Phänomenen nie bivariat sind. Das vorherige Modell diente lediglich dazu, die lineare Regression besser zu verstehen. Doch jetzt können wir uns der Realität nähern und erweitern das Modell.
+
+Wir berechnen nun eine **multivariate lineare Regression**. Wir möchten die Variable `trstlgl` in das Modell einfügen. Schaue im Codebook nach, wofür diese Variable steht. Welchen Effekt erwartet wir theoretisch von der Variable `trstlgl`? Dazu schauen wir uns zuerst die Korrelation zwischen beiden Variablen an.
+
+{{% tabs groupID="correlation" %}}
+{{% tab name=\"Klickweg\" %}}
+![Klickweg](../gif/corr.gif)
+{{% /tab %}}
+{{% tab name=\"Syntax\" %}}
+```{spss}
+CORRELATIONS
+/VARIABLES stfdem trstlgl
+/PRINT=TWOTAIL NOSIG
+/MISSING=PAIRWISE.
+```
+{{% /tab %}}
+{{% tab name=\"Ergebnis\" %}}
+![Korrelation](../img/corr.png)
+
+$\Rightarrow$ Der Korrelationswert zwischen `trstlgl` und `stfdem` zeigt uns an, dass eine negative Korrelation vorliegt, die aber nahe $0$ liegt, so dass man davon ausgehen kann, dass kein Zusammenhang zwischen den zwei Variablen vorliegt.
+{{% /tab %}}
+{{% /tabs %}}
+
+### Erweitern des Modells 
+Wir erweitern das Modell um die Variable `trstlgl`. 
+
+{{% expand \"Wie sieht unsere lineare Gleichung aus?\" %}}
+
+$$Y = \beta_0 + \beta_1*X_1 + \beta_2*X_2 + e$$
+
+$$stfdem = \beta_0 + \beta_1*stfeco + \beta_2*trstlgl + e$$
+{{% /expand %}}
+
+Dies setzen wir einfach in SPSS um:
+{{% tabs groupID="multivariat" %}}
+{{% tab name=\"Klickweg\" %}}
+![Klickweg](../gif/multivariat.gif)
+{{% /tab %}}
+{{% tab name=\"Syntax\" %}}
+```{spss}
+REGRESSION
+/MISSING LISTWISE 
+/STATISTICS COEFF R ANOVA CI(95)
+/NOORIGIN
+/DEPENDENT stfdem
+/METHOD=ENTER stfeco trstlgl.
+```
+
+Das einzige, was du zum vorherigen Code ändern musst, ist die Variable `trstlgl` in der letzten Zeile hinzuzufügen. Fertig und du kannst den Code ausführen lassen!
+{{% /tab %}}
+{{% tab name=\"Ergebnis\" %}}
+![Ergebnis](../img/results2.png)
+
+Das Modell kann $45.96 %$ der Varianz in `stfdem` erklären. Mit jedem Anstieg in `stfeco` (Zufriedenheit mit der ökonomischen Leistung) steigt `stfdem` um $0.874$ Punkte. Mit jedem Anstieg im Vertrauen zum Rechtssystem (`trstlgl`) sinkt die Zufriedenheit mit der Demokratie um $-0.042$. Beide Effekte sind signifikant ($p<0.05$). Um nun zu erschließen, welcher Effekt stärker auf die abhängige Variable wirkt, musst du dir die standardisierten Regressionskoeffizienten anschauen, denn die beiden Variablen haben nicht dieselbe Skala. 
+
+Die standardisierten Koeffizienten sind wie folgt: `stfeco` $0.678$ und `trstlgl` $-0.034$. Wir können daher sagen, dass der Effekt der Zufriedenheit mit der Wirtschaft deutlich stärker ist als der des Vertrauens in die Justiz ($|0.678| > |-0.034|$).
+{{% /tab %}}
+{{% /tabs %}}
+
+Du kannst also jetzt auch schon multivariate Modelle berechnen und weißt wie du diese interpretieren kannst! Jetzt fügen wir noch kategoriale Variablen hinzu!

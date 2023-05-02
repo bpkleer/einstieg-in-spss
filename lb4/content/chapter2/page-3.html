@@ -1,0 +1,85 @@
+---
+title: "Multivariate lin. Regression mit polytomen kategoriellen Variablen"  # Titel der Seite
+weight: 203  # Individuelles Gewicht 
+menuTitle: "Polytome kategoriale Variablen" # Falls Titel zulang ist, hier Kurztitel
+tags: ["regression", "kategorial", "polytom"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+
+
+<p>Wir können nicht nur dichotome, sondern auch polytome kategoriale Variablen in das Regressionsmodell hinzufügen. Wir möchten nun die Variable <code>edu</code> ins Modell aufnehmen. Diese Variable beinhaltet den höchsten Bildungsabschluss der befragten Person. Welche theoretischen Annahmen könnten wir für den Effekt von <code>edu</code> treffen?</p>
+<p>Wie zuvor erstellen wir zuerst Dummy-Variablen für die einzelnen Ausprägungen der <code>edu</code>-Variable.</p>
+<p>{{% tabs groupID=“dummy” %}}
+{{% tab name="Klickweg" %}}
+<img src="../gif/dummy.gif" alt="Klickweg" /></p>
+<p>Wichtig: SPSS erstellt hierbei auch eine Dummy-Variable für die fehlenden Werte. Es werden also <span class="math inline">\(6\)</span> Dummy-Variablen erstellt, für uns nützlich sind aber nur die <span class="math inline">\(5\)</span> der richtigen Kategorien (<code>edu_2</code> bis <code>edu_6</code>).
+{{% /tab %}}
+{{% tab name="Syntax" %}}
+In der Syntax benutzen wir wieder <code>RECODE</code> und nicht den spezifischen Befehl aus dem Klickweg.</p>
+<pre class="spss"><code>RECODE edu (1 = 1) (2,3,4,5 = 0) (else = copy) INTO isced_1.
+RECODE edu (2 = 1) (1,3,4,5 = 0) (else = copy) INTO isced_2.
+RECODE edu (3 = 1) (1,2,4,5 = 0) (else = copy) INTO isced_3.
+RECODE edu (4 = 1) (1,2,3,5 = 0) (else = copy) INTO isced_4.
+RECODE edu (5 = 1) (1,2,3,4 = 0) (else = copy) INTO isced_5.</code></pre>
+<p>Die neue Variable ist wie beim Klickweg mit <code>0</code>/<code>1</code> codiert. Auch hier benennen wir die neuen Variable nach der Ausprägung, so dass wir direkt vom Variablennamen wissen, was mit der Variable angezeigt wird.
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}
+<img src="../img/dummy-edu2.png" alt="Ergebnis Datenansicht" /></p>
+<div class="figure">
+<img src="../img/dummy-edu.png" alt="" />
+<p class="caption">Ergebnis</p>
+</div>
+<p>Wichtig: SPSS erstellt hierbei auch eine Dummy-Variable für die fehlenden Werte. Es werden also <span class="math inline">\(6\)</span> Dummy-Variablen erstellt, für uns nützlich sind</p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+<div id="berechnen-des-modells" class="section level2">
+<h2>Berechnen des Modells</h2>
+<p>Nachdem wir die Dummy-Variablen nun erstellt haben, fügen wir bis auf eine Dummy-Variable alle in das Modell ein. Als Referenzkategorie nehmen wir die niedrigste formale Bildung (<code>isced_1</code>). Wir fügen also <code>isced_2</code>, <code>isced_3</code>, <code>isced_4</code> und <code>isced_5</code> hinzu. Wir nutzen hier die Variablen aus der Syntax-Dummy-Kodierung.
+{{% tabs groupID=“polytom” %}}
+{{% tab name="Klickweg" %}}
+<img src="../gif/polytom.gif" alt="Klickweg" />
+{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>REGRESSION
+/MISSING LISTWISE 
+/STATISTICS COEFF R ANOVA CI(95)
+/NOORIGIN
+/DEPENDENT stfdem
+/METHOD=ENTER stfeco trstlgl gndr_1 isced_2 isced_3 isced_4 isced_5.</code></pre>
+<p>In der letzten Zeile müssen wir nur die weiteren Variablen aufführen.
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}
+<img src="../img/results4.png" alt="Ergebnis" />
+{{% /tab %}}
+{{% /tabs %}}</p>
+<p>{{% expand "Wie würde die Gleichung der Regression aussehen?" %}}
+Es wird der zusätzliche Effekt von den vier höchsten Ausprägungen (<code>ES-ISCED II</code>, <code>ES-ISCED III</code>, <code>ES-ISCED IV</code> und <code>ES-ISCED V</code>) gegenüber der niedrigsten Ausprägung (<code>ES-ISCED I</code>) berechnet.</p>
+<p>Die Referenzkategorie ist daher <code>ES-ISCED I</code> (ausgelassene Ausprägung).</p>
+<p><span class="math display">\[\begin{align*}stfdem = &amp;\beta_0 + \beta_1*stfeco + \beta_2*trstlgl + \beta_3*gndr\_1 + \\ &amp;\beta_4*isced\_2 + \beta_5*isced\_3 + \\ &amp;\beta_6*isced\_4 + \beta_7*isced\_5 + \\&amp;e \end{align*}\]</span>
+{{% /expand %}}</p>
+</div>
+<div id="ändern-der-referenzkategorie" class="section level2">
+<h2>Ändern der Referenzkategorie</h2>
+<p>In diesem Beispiel haben wir die niedrigste (bzw. erste) Ausprägung als Referenzkategorie gewählt. Doch was, wenn du z.B. die mittlere Kategorie (<code>ES-ISCED III</code>) als Referenz haben möchtest? Dies kannst du einfach ändern, in dem du die erste Variable hinzufügst und eine andere Variable aus der Gleichung entfernst. Danach musst du nur das Modell erneut berechnen.</p>
+<p>{{% tabs groupID=“polytom2” %}}
+{{% tab name="Klickweg" %}}
+<img src="../gif/polytom2.gif" alt="Klickweg" />
+{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>REGRESSION
+/MISSING LISTWISE 
+/STATISTICS COEFF R ANOVA CI(95)
+/NOORIGIN
+/DEPENDENT stfdem
+/METHOD=ENTER stfeco trstlgl gndr_1 isced_1 isced_2 isced_4 isced_5.</code></pre>
+<p>Wir haben hier also die Variable <code>isced_3</code> entfernt und die Variable <code>isced_1</code> hinzugefügt.
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}
+<img src="../img/polytom2.png" alt="Ergebnis" />
+{{% /tab %}}
+{{% /tabs %}}</p>
+<p>{{% expand "Interpretiere das respezifizierte Modell. Schreibe ein paar Sätze in das Skript." %}}</p>
+<p>Das Modell erklärt <span class="math inline">\(46.4 %\)</span> der Varianz in <code>stfdem</code>. Der Effekt von <code>stfeco</code> ist positiv und signifikant (<span class="math inline">\(p&lt;0.001\)</span>). Personen mit höherem Vertrauen in das Rechtssystem haben eine geringe Zufriedenheit (<span class="math inline">\(\beta_2 = -0.044\)</span>, <span class="math inline">\(p&lt;0.01\)</span>). Männliche und weibliche Befragte haben keine unterschiedliche Zufriedenheit (<span class="math inline">\(\beta_3 = 0.002\)</span>. <span class="math inline">\(p&gt;0.05\)</span>). Im Vergleich zu Personen mit mittlerem Bildungsabschluss, haben Personen mit sehr niedrigem Abschluss (<code>ES-ISCED I</code>) und niedrigem Bildungsabschluss (<code>ES-ISCED II</code>) ein geringeres Vertrauen (<span class="math inline">\(\beta_4 = -0.343\)</span> bzw. <span class="math inline">\(\beta_5 = -0.175\)</span>). Beide Effekte sind signifikant. Personen mit dem höchsten Bildungsabschluss haben ein deutlich höheres Vertrauen als Personen mit mittlerem Bildungsabschluss (<span class="math inline">\(\beta_7 = 0.527\)</span>, <span class="math inline">\(p&lt;0.001\)</span>). Personen mit dem zweithöchsten Abschluss haben ein geringfügig höheres Vertrauen (<span class="math inline">\(\beta_6 = 0.076\)</span>), dieser Effekt ist aber nicht signifikant.
+{{% /expand %}}</p>
+<p>So jetzt kannst du Modelle linearer Regressionen in SPSS erstellen und interpretieren.</p>
+</div>

@@ -1,0 +1,71 @@
+---
+title: "Zwischen zwei Gruppen"  # Titel der Seite
+weight: 202  # Individuelles Gewicht 
+menuTitle: "Zwei-Stichproben-T-Test" # Falls Titel zulang ist, hier Kurztitel
+tags: ["mittelwert", "mittelwertvergleiche", "t-Test"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+
+
+<p>Beim Zwei-Stichproben t-Test musst du unterscheiden, ob es sich um gepaarte oder ungepaarte Stichproben handelt. Aber was heißt das nochmal, wenn eine Stichprobe gepaart bzw. abhängig oder ungepaart bzw. unabhängig ist?</p>
+<p><strong>Ungepaart</strong> ist eine Stichprobe, wenn keine Zuordnungen zwischen den Fällen möglich ist. Vereinfacht gesagt heißt das, dass das jeder Fall im Datensatz ausschließlich eine befragte Person repräsentiert und ausschließlich einmal im Datensatz vorkommt.</p>
+<p><strong>Gepaart</strong> ist eine Stichprobe, wenn eindeutige Zuordnungen zwischen den Fällen möglich ist. Das heißt beispielsweise, dass wir in einem Datensatz mehrere Fälle für ein und dieselbe befragte Person haben, zum Beispiel, wenn diese zu den selben Fragen an unterschiedlichen Zeitpunkten befragt wurde.</p>
+<p>Mit unserem Datensatz liegt also eine ungepaarte Stichprobe vor. Diesen schauen wir uns auch nur an.</p>
+<div id="zwei-stichproben-t-test-ungepaart" class="section level2">
+<h2>Zwei-Stichproben t-Test (ungepaart)</h2>
+<p>In dieser Testsituation werden zwei verschiedene Gruppen innerhalb einer Stichprobe (z.B. nach Geschlecht) getestet. Wir benötigen also eine dichotome unabhängige Variable, die die beiden Gruppen definiert und eine metrische abhängige Variable. Beide Gruppen sind nicht verbunden bzw. nicht gepaart. Die Antwort des einen Falles ist nicht durch die Antwort anderer Fälle beeinflusst bzw. steht nicht in Verbindung dazu.</p>
+<p>Wir möchten testen, inwieweit die vertragliche Arbeitszeit (<code>wkhtot</code>) sich zwischen Männern und Frauen (<code>gndr</code>) in der Stichprobe unterscheidet.</p>
+<p>Wie sind die Variablen kodiert? Prüfe es im Codebook:
+{{%attachments style="grey" title="Codebook PSS" /%}}</p>
+<div id="annahmen" class="section level3">
+<h3>Annahmen</h3>
+<p>Um den Test zu berechnen, müssen zwei Annahmen geprüft werden:</p>
+<ol style="list-style-type: decimal">
+<li><p>Varianzgleichheit (Levene-Test)</p></li>
+<li><p>Normalverteilung der metrischen Variable (uV)</p></li>
+</ol>
+<p>Die zweite Annahme muss nur getestet werden, wenn <span class="math inline">\(n &lt; 30\)</span>. In Situationen mit <span class="math inline">\(n &gt; 30\)</span> liefert der Test asymptotisch korrekte Ergebnisse.</p>
+<p>Um zu prüfen, ob Varianzgleichheit vorliegt, berechnest du den <strong>Levene-Test</strong>. Dieser wird in SPSS automatisch mit ausgegeben!</p>
+</div>
+<div id="durchführung-des-tests" class="section level3">
+<h3>Durchführung des Tests</h3>
+<p>Hier nutzen wir wieder den <code>T-Test</code>-Befehl, jedoch mit anderen Parametern und Unterbefehlen.</p>
+<p>{{% tabs groupId="ttest2" %}}
+{{% tab name="Klickweg" %}}</p>
+<div class="float">
+<img src="../gif/ttest2.gif" alt="Klickweg" />
+<div class="figcaption">Klickweg</div>
+</div>
+<p>{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>T-TEST GROUPS=gndr(&#39;female&#39; &#39;male&#39;)
+  /VARIABLES=wkhtot
+  /CRITERIA=CI(.95).</code></pre>
+<p><code>T-TEST</code> ist auch hier der Hauptbefehl. Nach dem Parameter <code>GROUPS</code> legst du die beiden Ausprägungen, die die Gruppierung bilden fest. Nach <code>/VARIABLES</code> definieren wir auch hier die Testvariable. Nach <code>/CRITERIA</code> folgt die Festlegung des Konfidenzintervalls. <code>(.95)</code> bedeutet, dass 95%-Konfidenzintervall der Differenz.</p>
+<p>{{% /tab %}}
+{{% tab name="Ergebnis" %}}</p>
+<div class="float">
+<img src="../img/ttest2.png" alt="Ergebnis" />
+<div class="figcaption">Ergebnis</div>
+</div>
+<p>Hier kannst du die <strong>Signfikanz des Levene-Test der Varianzgleichheit</strong>, die <strong>Signfikanz des t-Tests für die Mittelwertgleichheit</strong> sowie die <strong>Mittlere Differenz</strong>. Schau dir unten an wie die Signfikanzmaßzahlen genau interpretiert werden.</p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+<p>Wie wird der Levene-Test interpretiert?</p>
+<p>Die Nullhypothese des Tests (<span class="math inline">\(H_0\)</span>) lautet, dass beide Gruppen in der metrischen Variable gleiche Varianzen haben. Ein p-Wert unter <span class="math inline">\(0.05\)</span> erfordert die Ablehnung der Nullhypothese. Daher sind keine gleichen Varianzen anzunehmen.</p>
+<p>{{% expand "Was sagt also der Test hier aus?" %}}
+Richtig, in diesem Fall kann die Varianzgleichheit angenommen werden, da der p-Wert <span class="math inline">\(&gt;0.05\)</span> ist. Wir interpretieren also die Zeile <em>Varianzen sind gleich</em>.
+{{% /expand %}}</p>
+<p>Du siehst jetzt die folgenden Werte:</p>
+<ul>
+<li><p><span class="math inline">\(T = 1.351\)</span> (<strong>t-Wert</strong>)</p></li>
+<li><p>einseitiges <span class="math inline">\(p = 0.088\)</span> (<strong>einseitige Signifikanz</strong>)</p></li>
+<li><p>zweiseitiges <span class="math inline">\(p = 0.177\)</span> (<strong>zweiseitige Signifikanz</strong>)</p></li>
+<li><p><span class="math inline">\(CI = [-0.144, 0.780]\)</span> (<strong>Unterer und oberer Wert des 95% Konfidenzintervalls der Differenz</strong>)</p></li>
+<li><p>Mittelwert female <span class="math inline">\(34.46\)</span></p></li>
+<li><p>Mittelwert male <span class="math inline">\(34.14\)</span></p></li>
+</ul>
+<p>Im Durchschnitt arbeiten Männer etwas weniger (<span class="math inline">\(0.318\)</span>), aber die Differenz ist nicht statistisch signifikant.</p>
+<p>Gehe nun zu Testsituationen mit mehr als zwei Gruppen!</p>
+</div>
+</div>

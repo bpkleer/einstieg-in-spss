@@ -1,0 +1,100 @@
+---
+title: "Multivariate lin. Regression mit polytomen kategoriellen Variablen"  # Titel der Seite
+weight: 203  # Individuelles Gewicht 
+menuTitle: "Polytome kategoriale Variablen" # Falls Titel zulang ist, hier Kurztitel
+tags: ["regression", "kategorial", "polytom"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+Wir können nicht nur dichotome, sondern auch polytome kategoriale Variablen in das Regressionsmodell hinzufügen. Wir möchten nun die Variable `edu` ins Modell aufnehmen. Diese Variable beinhaltet den höchsten Bildungsabschluss der befragten Person. Welche theoretischen Annahmen könnten wir für den Effekt von `edu` treffen?
+
+Wie zuvor erstellen wir zuerst Dummy-Variablen für die einzelnen Ausprägungen der `edu`-Variable.
+
+{{% tabs groupID="dummy" %}}
+{{% tab name=\"Klickweg\" %}}
+![Klickweg](../gif/dummy.gif)
+
+Wichtig: SPSS erstellt hierbei auch eine Dummy-Variable für die fehlenden Werte. Es werden also $6$ Dummy-Variablen erstellt, für uns nützlich sind aber nur die $5$ der richtigen Kategorien (`edu_2` bis `edu_6`).
+{{% /tab %}}
+{{% tab name=\"Syntax\" %}}
+In der Syntax benutzen wir wieder `RECODE` und nicht den spezifischen Befehl aus dem Klickweg.
+```{spss}
+RECODE edu (1 = 1) (2,3,4,5 = 0) (else = copy) INTO isced_1.
+RECODE edu (2 = 1) (1,3,4,5 = 0) (else = copy) INTO isced_2.
+RECODE edu (3 = 1) (1,2,4,5 = 0) (else = copy) INTO isced_3.
+RECODE edu (4 = 1) (1,2,3,5 = 0) (else = copy) INTO isced_4.
+RECODE edu (5 = 1) (1,2,3,4 = 0) (else = copy) INTO isced_5.
+```
+
+Die neue Variable ist wie beim Klickweg mit `0`/`1` codiert. Auch hier benennen wir die neuen Variable nach der Ausprägung, so dass wir direkt vom Variablennamen wissen, was mit der Variable angezeigt wird. 
+{{% /tab %}}
+{{% tab name=\"Ergebnis\" %}}
+![Ergebnis Datenansicht](../img/dummy-edu2.png)
+
+![Ergebnis](../img/dummy-edu.png)
+
+Wichtig: SPSS erstellt hierbei auch eine Dummy-Variable für die fehlenden Werte. Es werden also $6$ Dummy-Variablen erstellt, für uns nützlich sind
+
+{{% /tab %}}
+{{% /tabs %}}
+
+## Berechnen des Modells
+Nachdem wir die Dummy-Variablen nun erstellt haben, fügen wir bis auf eine Dummy-Variable alle in das Modell ein. Als Referenzkategorie nehmen wir die niedrigste formale Bildung (`isced_1`). Wir fügen also `isced_2`, `isced_3`, `isced_4` und `isced_5` hinzu. Wir nutzen hier die Variablen aus der Syntax-Dummy-Kodierung. 
+{{% tabs groupID="polytom" %}}
+{{% tab name=\"Klickweg\" %}}
+![Klickweg](../gif/polytom.gif)
+{{% /tab %}}
+{{% tab name=\"Syntax\" %}}
+```{spss}
+REGRESSION
+/MISSING LISTWISE 
+/STATISTICS COEFF R ANOVA CI(95)
+/NOORIGIN
+/DEPENDENT stfdem
+/METHOD=ENTER stfeco trstlgl gndr_1 isced_2 isced_3 isced_4 isced_5.
+```
+
+In der letzten Zeile müssen wir nur die weiteren Variablen aufführen. 
+{{% /tab %}}
+{{% tab name=\"Ergebnis\" %}}
+![Ergebnis](../img/results4.png)
+{{% /tab %}}
+{{% /tabs %}}
+
+{{% expand \"Wie würde die Gleichung der Regression aussehen?\" %}}
+Es wird der zusätzliche Effekt von den vier höchsten Ausprägungen (`ES-ISCED II`, `ES-ISCED III`, `ES-ISCED IV` und `ES-ISCED V`) gegenüber der niedrigsten Ausprägung (`ES-ISCED I`) berechnet. 
+
+Die Referenzkategorie ist daher `ES-ISCED I` (ausgelassene Ausprägung).
+
+$$\begin{align*}stfdem = &\beta_0 + \beta_1*stfeco + \beta_2*trstlgl + \beta_3*gndr\_1 + \\ &\beta_4*isced\_2 + \beta_5*isced\_3 + \\ &\beta_6*isced\_4 + \beta_7*isced\_5 + \\&e \end{align*}$$
+{{% /expand %}}
+
+## Ändern der Referenzkategorie
+In diesem Beispiel haben wir die niedrigste (bzw. erste) Ausprägung als Referenzkategorie gewählt. Doch was, wenn du z.B. die mittlere Kategorie (`ES-ISCED III`) als Referenz haben möchtest? Dies kannst du einfach ändern, in dem du die erste Variable hinzufügst und eine andere Variable aus der Gleichung entfernst. Danach musst du nur das Modell erneut berechnen.
+
+{{% tabs groupID="polytom2" %}}
+{{% tab name=\"Klickweg\" %}}
+![Klickweg](../gif/polytom2.gif)
+{{% /tab %}}
+{{% tab name=\"Syntax\" %}}
+```{spss}
+REGRESSION
+/MISSING LISTWISE 
+/STATISTICS COEFF R ANOVA CI(95)
+/NOORIGIN
+/DEPENDENT stfdem
+/METHOD=ENTER stfeco trstlgl gndr_1 isced_1 isced_2 isced_4 isced_5.
+```
+
+Wir haben hier also die Variable `isced_3` entfernt und die Variable `isced_1` hinzugefügt. 
+{{% /tab %}}
+{{% tab name=\"Ergebnis\" %}}
+![Ergebnis](../img/polytom2.png)
+{{% /tab %}}
+{{% /tabs %}}
+
+{{% expand \"Interpretiere das respezifizierte Modell. Schreibe ein paar Sätze in das Skript.\" %}}
+
+Das Modell erklärt $46.4 %$ der Varianz in `stfdem`. Der Effekt von `stfeco` ist positiv und signifikant ($p<0.001$). Personen mit höherem Vertrauen in das Rechtssystem haben eine geringe Zufriedenheit ($\beta_2 = -0.044$, $p<0.01$). Männliche und weibliche Befragte haben keine unterschiedliche Zufriedenheit ($\beta_3 = 0.002$. $p>0.05$). Im Vergleich zu Personen mit mittlerem Bildungsabschluss, haben Personen mit sehr niedrigem Abschluss (`ES-ISCED I`) und niedrigem Bildungsabschluss (`ES-ISCED II`) ein geringeres Vertrauen ($\beta_4 = -0.343$ bzw. $\beta_5 = -0.175$). Beide Effekte sind signifikant. Personen mit dem höchsten Bildungsabschluss haben ein deutlich höheres Vertrauen als Personen mit mittlerem Bildungsabschluss ($\beta_7 = 0.527$, $p<0.001$). Personen mit dem zweithöchsten Abschluss haben ein geringfügig höheres Vertrauen ($\beta_6 = 0.076$), dieser Effekt ist aber nicht signifikant. 
+{{% /expand %}}
+
+So jetzt kannst du Modelle linearer Regressionen in SPSS erstellen und interpretieren.
