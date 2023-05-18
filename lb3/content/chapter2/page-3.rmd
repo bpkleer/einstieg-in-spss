@@ -5,6 +5,12 @@ menuTitle: "F-Test" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Anova", "F-Test", "Varianzgleichheit", "Levene-Test", "Bonferroni"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href=\"https\:\/\/gitlab.ub.uni-giessen.de\/methoden-politik\/einstieg-in-r\/issues\/new?issue[title]=\" icon=\"fas fa-bug\" %}} {{% /buttonGit %}} 
+
+{{% button href=\"https\:\/\/twitter.com\/intent\/tweet\" icon=\"fab fa-twitter\" %}} {{% /button %}}
+
+{{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
+
 Auf dieser Seite werden Mittelwertvergleiche zwischen mehr als zwei Gruppen vorgestellt. Diese Test-Statistik wird (einfaktorielle) **ANOVA** oder **F-Test** genannt. Wir möchten nun die verschiedenen Gruppen der `edu`-Variable testen. 
 
 ### Hypothesen des F-Tests

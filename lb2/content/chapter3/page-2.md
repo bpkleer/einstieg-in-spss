@@ -5,6 +5,12 @@ menuTitle: "metrische Variable" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Grafik", "Histogramm", "Normalverteilung", "Kurtosis", "Schiefe", "Boxplot", "EXAMINE"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 ## Darstellung Histogramm mit Normalverteilungskurve
 
 Ein **Histogramm** setzt auf der X-Achse gleichbleibende Abstände voraus. Daher ist es zu empfehlen, hier Variablen mit **metrischem Skalenniveau** zu verwenden. Daher kannst du hier nicht wie beim Säulendiagramm die Reihenfolge der Balken mit `/FORMATS` frei bestimmen.

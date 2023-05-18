@@ -5,6 +5,12 @@ menuTitle: "Dateneingabe"
 tags: ["Datenfenster", "Primärdaten", "Sekundärdaten", "Downloads", "Datentabelle", "Skalenniveaus"]
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Wir unterscheiden zwischen Primär- und Sekundärdaten in der empirischen Sozialforschung. Sekundärdaten sind erhobenen und bereits aufgearbeitete fertige Datensätze, die wir von anderen Forscher:innen erhalten. In SPSS bearbeitest du meistens bereits erhobene Daten, sogenannte **Sekundärdatensätze**.  Wie wir mit Sekundärdaten umgehen, wird im zweiten Lernblock dargestellt. Um aber das **Datenfenster** besser zu verstehen, wirst du auf dieser Seite die Schritte von der Datenerhebung zum Datensatz lernen. 
 
 Wir wollen jetzt erstmal selbst einen Datensatz erstellen. Dazu gibt es zwei zentrale Schritte in SPSS. Zuerst erstellen wir eine Variablenbeschreibung in der **Variablenansicht**. Danach geben wir in der **Datenansicht** die Daten ein. In SPSS wird beides im Datenfenster dargestellt.

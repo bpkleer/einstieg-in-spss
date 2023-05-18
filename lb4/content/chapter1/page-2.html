@@ -7,6 +7,9 @@ tags: ["regression", "bivariat", "regressionskoeffizienten", "p-wert"]  # Tags h
 
 
 
+<p>{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-r/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}}</p>
+<p>{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}</p>
+<p>{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}</p>
 <p>{{% attachments style="grey" title="Datensatz" /%}}</p>
 <p>Wir nutzen jetzt wieder den Datensatz <strong>PSS</strong>, den wir schon während des gesamten Lernmoduls genutzt haben. Wir möchten nun testen, inwieweit die Zufriedenheit mit der ökonomischen Leistung die Zufriedenheit mit der Demokratie erklärt. Wir gehen also davon aus, dass die Zufriedenheit mit der ökonomischen Leistung die Zufriedenheit mit der Demokratie beeinflusst.</p>
 <p>Die zwei Variablen, die du daher benötigst für diese lineare Regression sind <code>stfeco</code> (Zufriedenheit mit der ökonomischen Leistung) und <code>stfdem</code> (Zufriedenheit mit der Demokratie).</p>
@@ -49,9 +52,9 @@ Hier siehst du nun die einzelnen Ausgaben, die wir mit dem Befehl angefordert ha
 <div id="interpretation-der-koeffizienten" class="section level2">
 <h2>Interpretation der Koeffizienten</h2>
 <p>Zuerst schauen wir uns den Koeffizientenblock an, in dem die einzelnen Werte der Regression ausgegeben werden.</p>
-<div class="figure">
-<img src="../img/coefblock.png" alt="" />
-<p class="caption">Koeffizientenblock</p>
+<div class="float">
+<img src="../img/coefblock.png" alt="Koeffizientenblock" />
+<div class="figcaption">Koeffizientenblock</div>
 </div>
 <p>Dazu schaust du dir in der Ausgabe den Koeffizientenblock an. Hierin sind alle Variablen aufgeführt, die wir per Befehl bzw. aus der Formel zum Modell hinzugefügt haben. Hier also die Konstante (<em>Intercept</em>, <span class="math inline">\(\beta_0\)</span>) und der Regressionskoeffizient für die Zufriedenheit mit der Wirtschaft (<code>stfeco</code>, <span class="math inline">\(\beta_2\)</span>).</p>
 <p>In den Spalten siehst du das SPSS sowohl den nicht standardisierten Koeffizient und dessen Standardfehler und auch den standardisierten Koeffizienten ausgibt. In den Statistik-Vorlesungen hast du ja bereits die z-Standardisierung kennengelernt um Verteilungen von Variablen besser vergleichen zu können. Die z-Standardisierung rekodiert eine Variable auf die Einheit Standardabweichung, so dass Variablen, die z-standardisiert sind, vergleichbar sind.</p>
@@ -80,15 +83,15 @@ Hier siehst du nun die einzelnen Ausgaben, die wir mit dem Befehl angefordert ha
 <p>Zur globalen Bewertung der Modellgüte wird oftmals das Bestimmtheitsmaß <span class="math inline">\(R^2\)</span> angegeben. <span class="math inline">\(R^2\)</span> liefert die Information, wie viel der Varianz der abhängigen Variablen durch das Modell erklärt werden kann.</p>
 <p>Die Gleichung lautet:</p>
 <p><span class="math display">\[R^2 = \frac{\sum_{i=1}^n(\hat{y_i}-\bar{y})^2}{\sum_{i=1}^n(y_i-\bar{y})^2} = \frac{erklärte \, Varianz}{gesamte \, Varianz}\]</span></p>
-<div class="figure">
-<img src="../img/r2.png" alt="" />
-<p class="caption"><span class="math inline">\(R^2\)</span></p>
+<div class="float">
+<img src="../img/r2.png" alt="R^2" />
+<div class="figcaption"><span class="math inline">\(R^2\)</span></div>
 </div>
 <p>Die Grafik stellt die Formel nochmal dar: die erklärte Varianz ist die Summe der quadrierte Abstände zwischen geschätztem Wert und dem Mittelwert. Die gesamte Varianz ist die Summe der quadrierten Abstände zwischen beobachtetem Wert und dem Mittelwert.</p>
 <p>In SPSS schauen wir dazu in die Modellzusammenfassung:</p>
-<div class="figure">
-<img src="../img/modell.png" alt="" />
-<p class="caption">Modellzusammenfassung</p>
+<div class="float">
+<img src="../img/modell.png" alt="Modellzusammenfassung" />
+<div class="figcaption">Modellzusammenfassung</div>
 </div>
 <p>Wir sehen angegeben <span class="math inline">\(R\)</span>, <span class="math inline">\(R^2\)</span> sowie ein korrigiertes <span class="math inline">\(R^2\)</span>. Das korrigierte <span class="math inline">\(R^2\)</span> wird für Modelle genutzt, in dem mehr als eine unabhängige Variable eingefügt wurde, da sich <span class="math inline">\(R^2\)</span> durch das Hinzufügen einzelner Variablen erhöht und daher korrigiert werden muss. Da wir in der Regel multivariate Modelle berechnen und dieses bivariate Modell nur zur Veranschaulichung dient, schauen wir uns deshalb auch hier direkt das korrigierte <span class="math inline">\(R^2\)</span> an. Der Wert liegt bei <span class="math inline">\(R^2 = 0.459\)</span>. Was sagt uns das nun?</p>
 <p>{{% tabs %}}

@@ -5,6 +5,12 @@ menuTitle: "Compute-Befehl" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Indizes", "COMPUTE", "Subtraktion", "Addition", "Variablenbenennung"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Manche Umcodierungen können wir nicht durchführen, indem wir die Reihenfolge der Ausprägungen ändern oder diese durchführen. Manchmal wollen wir eine neue Variable aus einer alten berechnen. Das machen wir oft bei **Indizes**. 
 
 ## Exkurs: Indizes

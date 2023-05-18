@@ -5,6 +5,12 @@ weight: 103
 tags: ["Dateimanagement", "Datei", "Dateipfad"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Das Dateimanagement kann nicht nur auf dem eigenen Rechner manchmal zu Verwirrung führen. Im folgenden Video zeigen wir dir, wie du auf den Uni-Rechnern deine Dateien speichern bzw. managen kannst. Folgst du diesen Schritten nicht, ist die Speicherung deiner Dateien nicht gesichert und möglicherweise gehen diese verloren. An jedem PC an der Universität hast du Zugriff auf dein persönliches Laufwerk (`Z:/`). 
 
 ![Wege zum Speichern & Laden einer Datei](../gif/speichern.gif)

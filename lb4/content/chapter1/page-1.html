@@ -7,6 +7,9 @@ tags: ["regression", "basics regression", "gleichung regression"]  # Tags hierei
 
 
 
+<p>{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-r/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}}</p>
+<p>{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}</p>
+<p>{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}</p>
 <p>Mit einer <strong>linearen Regression</strong> schätzen wir die kausale Beziehung zwischen mehreren unabhängigen Variablen und einer abhängigen Variable. Das Modell wird i.d.R. mit dem Verfahren <em>Ordinary-Least-Squares</em> (OLS) geschätzt und so erhalten wir den besten linearen Schätzer (<em>Best Linear Unbiased Estimator - BLUE</em>). Dies gilt aber nur sofern die Annahmen der linearen Regression zutreffen.</p>
 <p>Basierend auf theoretischen Annahmen oder empirischer Evidenz anderer Forscher:innen (<em>state of the art</em>) schätzen wir ein Modell. Die unabhängigen Variablen werden oftmals geteilt in Kontrollvariablen und Variablen, über die wir theoretische Annahmen testen möchten.</p>
 <p>Was solltest du dir aus den Statistik-Vorlesungen in Erinnerung rufen, bevor du im Lernmodul weitergehst?</p>
@@ -22,9 +25,9 @@ tags: ["regression", "basics regression", "gleichung regression"]  # Tags hierei
 <p>In diesem Beispiel nutzen wir wieder den Datensatz <code>PSS</code>, der unter anderem die Zufriedenheit mit der Demokratie (<code>stfdem</code>) und die Zufriedenheit mit der Wirtschaft (<code>stfeco</code>) enthält. Wir möchten ein Modell berechnen, in dem wir einen Effekt Zufriedenheit mit der Wirtschaft auf die Demokratiezufriedenheit berechnen. Wir schätzen also, inwieweit die Zufriedenheit mit der Wirtschaft die Demokratiezufriedenheit beeinflusst.</p>
 <p>Überlege kurz, was dafür unsere theoretische Annahme sein könnte.</p>
 <p>Eine lineare Beziehung können wir über ein <strong>Scatterplot</strong> testen.</p>
-<div class="figure">
-<img src="../img/reg1.png" alt="" />
-<p class="caption">Lineare Beziehung</p>
+<div class="float">
+<img src="../img/reg1.png" alt="Lineare Beziehung" />
+<div class="figcaption">Lineare Beziehung</div>
 </div>
 </div>
 <div id="was-ist-das-ziel-der-linearen-regression" class="section level2">

@@ -5,6 +5,12 @@ menuTitle: "Sortieren" # Falls Titel zulang ist, hier Kurztitel
 tags: ["SORT", "SPLIT FILE"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 In manchen Fällen wollen wir uns verschiedene Subgruppen gleichzeitig anschauen. Dafür bietet SPSS einen Befehl an, der bei jeder Analyse das Ergebnis nach den verschiedenen Subgruppen, die uns interessieren, sortiert ausgibt.
 
 ### Der Syntax-Befehl

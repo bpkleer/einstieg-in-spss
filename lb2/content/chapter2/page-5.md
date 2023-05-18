@@ -5,6 +5,12 @@ menuTitle: "Streumaße" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Univariate Statistik", "Streumaße", "DESCRIPTIVES", "FREQUENCIES"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 ## Grundlegende Kenngrößen der Streumaße
 
 Die meisten Streumaße beziehen sich auf das **arithmetische Mittel**. Sie geben relativ zum arithemtischen Mittel an, wie weit alle Fälle im Durchschnitt vom Mittelwert abweichen. Weil das arithemtische Mittel eine wichtige Voraussetzung ist, benötigst du für Streumaße streng genommen mindestens das **metrische Skalenniveau**.

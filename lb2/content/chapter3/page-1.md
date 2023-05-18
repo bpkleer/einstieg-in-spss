@@ -5,6 +5,12 @@ menuTitle: "kategoriale Variable" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Grafik", "Kreisdiagramm", "Säulendiagramm", "Kategoriale Variablen"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Bestimmt hast du oft das Gefühl, dass du mit den errechneten Zahlen nichts anfangen kannst. Sie sind oft nicht intuitiv interpretierbar und müssen durch viel Text erklärt werden. Daher ist es eine wichtige Kompetenz, mathemtische Ergebnisse grafisch darstellen zu können. Sie lösen das Problem. Sie sind intuitiver interpretierbarer und fassen Ergebnisse einfach zusammen. Hier lernen wir drei Grafiktypen kennen, die wir einfach in SPSS erstellen lassen können. Für **kategoriale Variablen**, also Variablen die *nominal* oder *ordinal* sind, eignet sich das **Kreisdiagramm** und das **Säulendiagramm**. Für **metrische Variablen** eignet sich das **Histogramm** gut. Ebenso können **Boxplots** die verschiedenen deskriptiven Maße bei **metrischen Variablen** gut darstellen. Wieso wir hier wieder beim Skalenniveau unterscheiden müssen, liegt an der Anlage des Diagramms. Wir gehen darauf gleich näher ein. 
 
 ## Das Kreisdiagramm 

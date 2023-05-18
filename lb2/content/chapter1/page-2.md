@@ -5,6 +5,12 @@ menuTitle: "Text-Import" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Daten", "Dateiendungen", ".txt", ".csv", "Datenimport", "GET DATA"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Als erstes werden wir globale Datensatz-Dateiformate importieren. Dies sind `.txt` und `.csv` wie du auf der letzten Seite sehen konntest. 
 
 {{%attachments style=\"grey\" title=\"Datensatz\" /%}}

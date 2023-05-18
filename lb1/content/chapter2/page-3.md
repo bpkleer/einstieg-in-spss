@@ -5,6 +5,12 @@ menuTitle: "Datenansicht" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Datenansicht" , "Datentabellen", "Dateneingabe", "Primärdaten", "userdefinierter fehlender Wert", "systemdefinierter fehlender Wert"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Wir haben nun das Datengerüst geschaffen und machen nun mit dem zweiten Schritt weiter. Wechseln wir dafür in die **Datenanischt**.
 
 ![Wechsel in die Datenansicht](../gif/datenansicht1.gif)

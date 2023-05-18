@@ -5,6 +5,12 @@ menuTitle: "Syntax-Fenster" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Syntax", "Befehle", "Frequencies", "Kommentare", "Hilfe", "Befehlssyntaxreferenz"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Schauen wir uns nun ein anderes Fenster von SPSS an - das Syntaxfenster. 
 
 {{% expand \"Welche Funktion hatte nochmal das Syntaxfenster? Mit welchem Dateiformat kann es gespeichert werden?\" %}}

@@ -5,6 +5,12 @@ menuTitle: "Zusammenhangsmaße" # Falls Titel zulang ist, hier Kurztitel
 tags: ["zusammenhangsmaße", "chi-quadrat", "cramers v", "gamma", "erwartete Werte", "beobachtete Werte"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href=\"https\:\/\/gitlab.ub.uni-giessen.de\/methoden-politik\/einstieg-in-r\/issues\/new?issue[title]=\" icon=\"fas fa-bug\" %}} {{% /buttonGit %}} 
+
+{{% button href=\"https\:\/\/twitter.com\/intent\/tweet\" icon=\"fab fa-twitter\" %}} {{% /button %}}
+
+{{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
+
 Mit Zusammenhangsmaßen kannst du testen, ob und inwieweit zwei Variablen miteinander zusammenhängen. Als ein erstes Maß hast du in der Statistik-Vorlesung $\chi^2$ kennengelernt, das prüft, ob ein Zusammenhang zwischen zwei Variablen vorliegt. Als weiteres Maß für die Stärke eines Zusammenhangs kennst du Cramer's V. Für die Berechnung der beiden Zusammenhangsmaße betrachten wir den Vergleich zwischen **beobachten und erwarteten Werten**. 
 
 **Beobachtete Werte** sind die Werte, die gemessen worden sind. **Erwartete Werte** sind die Werte, die wir erwarten, wenn **kein Zusammenhang** zwischen den beiden Variablen besteht. Was das genau ist, kannst du [hier](https://lehre.bpkleer.de/stats101/LM3/chapter1/page-1-a/) nachschauen.

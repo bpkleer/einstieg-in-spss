@@ -5,6 +5,12 @@ menuTitle: "Bivariates Beispiel" # Falls Titel zulang ist, hier Kurztitel
 tags: ["regression", "bivariat", "regressionskoeffizienten", "p-wert"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href=\"https\:\/\/gitlab.ub.uni-giessen.de\/methoden-politik\/einstieg-in-r\/issues\/new?issue[title]=\" icon=\"fas fa-bug\" %}} {{% /buttonGit %}} 
+
+{{% button href=\"https\:\/\/twitter.com\/intent\/tweet\" icon=\"fab fa-twitter\" %}} {{% /button %}}
+
+{{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
+
 {{% attachments style=\"grey\" title=\"Datensatz\" /%}}
 
 Wir nutzen jetzt wieder den Datensatz **PSS**, den wir schon während des gesamten Lernmoduls genutzt haben. Wir möchten nun testen, inwieweit die Zufriedenheit mit der ökonomischen Leistung die Zufriedenheit mit der Demokratie erklärt. Wir gehen also davon aus, dass die Zufriedenheit mit der ökonomischen Leistung die Zufriedenheit mit der Demokratie beeinflusst. 

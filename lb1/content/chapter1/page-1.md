@@ -5,6 +5,12 @@ weight: 101  # Individuelles Gewicht
 tags: ["Datei", "Dateimanagement", "Dateipfad"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 In der praktischen Datenanalyse, in der wir Berechnungen nicht händisch durchführen (wie z. B. in der Vorlesung zu Statistik), nutzen wir die Rechenleistung eines Computers, um Daten zu bearbeiten, einfache Berechnungen oder auch kompliziertere statische Modelle zu berechnen. Wir verwenden dabei Daten, die wir in Dateien gespeichert haben. Doch was sind eigentlich nochmal Dateien und wie lassen sich diese finden?
 
 **Daten** werden in der Regel als **Dateien** an einem *lokalen* Ort auf dem Computer (Desktop oder Laptop) oder Tablet gespeichert. *Lokal* meint dabei, dass die Dateien physisch auf deinem Rechner abgelegt sind. Das Gegenteil sind Dateien, die zum Beispiel in einer Cloud (wie der Hessenbox) gespeichert sind und nur temporär bei der Bearbeitung der Dateien lokal gespeichert werden.

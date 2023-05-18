@@ -5,6 +5,12 @@ menuTitle: "Korrelationen" # Falls Titel zulang ist, hier Kurztitel
 tags: ["korrelationen", "Pearson's R", "Spearman's Rho", "Linearität"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href=\"https\:\/\/gitlab.ub.uni-giessen.de\/methoden-politik\/einstieg-in-r\/issues\/new?issue[title]=\" icon=\"fas fa-bug\" %}} {{% /buttonGit %}} 
+
+{{% button href=\"https\:\/\/twitter.com\/intent\/tweet\" icon=\"fab fa-twitter\" %}} {{% /button %}}
+
+{{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
+
 Machen wir weiter mit **Pearson's R**. Eine Korrelation nach Pearson's R beschreibt in erster Linie einen **linearen Zusammenhang** zwischen zwei Variablen. Aber nicht vergessen: **Eine Korrelation trifft keine Aussage zur Kausalität**. Ein Korrelationskoeffizient misst nur, ob sich zwei Merkmale im linearen Gleichklang bewegen.
 
 Für die Berechnung von **Pearson's r** müssen folgende Bedingungen erfüllt sein: 

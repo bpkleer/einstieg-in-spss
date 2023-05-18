@@ -5,6 +5,12 @@ menuTitle: "Variablenansicht" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Datengerüst" , "Variablenansicht", "Primärdaten", "Dateneingabe"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Bevor wir nun die einzelnen Variablen eingeben, erstellen wir das Datengerüst in SPSS. 
 
 Variablen können verschiedene Eigenschaften haben. Dazu bietet das SPSS **Datenfenster** eine umfassende Ansicht. Du kannst sie jederzeit hinzufügen und verschieben. Für deine eigene Übersicht ist es aber besser, wenn du das in einer sinnvollen Reihenfolge machst.

@@ -5,6 +5,12 @@ menuTitle: "Filtern" # Falls Titel zulang ist, hier Kurztitel
 tags: ["FILTER"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+
+{{% button href="https://twitter.com/intent/tweet" icon="fab fa-twitter" %}} {{% /button %}}
+
+{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
 Manchmal möchten wir nicht mit allen Fällen eines Datensatzes arbeiten. Das ist zum Beispiel oft bei der Analyse von bestimmten Bevölkerungsgruppen der Fall. In diesen Fällen filtern wir unsere Daten vor der Analyse. So können wir Fälle, die wir für unsere Analyse nicht benötigen, temporär weglassen. Dafür müssen wir einen **Filter** verwenden.
 
 {{% expand \"Schau dir nochmal das Codebuch von Panem an. Nach welchen Kriterien könnten wir filtern?" %}}

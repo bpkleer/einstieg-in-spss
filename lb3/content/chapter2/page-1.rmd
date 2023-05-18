@@ -5,6 +5,12 @@ menuTitle: "Ein-Stichproben-T-Test" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Mittelwert", "Mittelwertvergleiche", "t-Test", "Nullhypothese", "Alternativhypothese", "Signifikanz", "Irrtumswahrscheinlichkeit", ]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
+{{% buttonGit href=\"https\:\/\/gitlab.ub.uni-giessen.de\/methoden-politik\/einstieg-in-r\/issues\/new?issue[title]=\" icon=\"fas fa-bug\" %}} {{% /buttonGit %}} 
+
+{{% button href=\"https\:\/\/twitter.com\/intent\/tweet\" icon=\"fab fa-twitter\" %}} {{% /button %}}
+
+{{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
+
 ## Mittelwerte vergleichen
 Die zweite große Säule der Datenanalyse ist die Untersuchung von Unterschieden. Dabei werden Mittelwerte zweier oder mehrerer Gruppen verglichen. Dafür wird eine **metrische Variable** nach einer **kategorialen Variable** analysiert. So können wir untersuchen, ob eine bestimmte Populationsgruppe systematisch über andere Werte verfügt als eine andere Gruppe. Es gibt mehrere Arten des Mittelwertvergleiches. Diese haben je nach Stichprobenart und Variablenart unterschiedliche Charakteristika. Wir lernen in diesem Abschnitt folgende kennen:
 
