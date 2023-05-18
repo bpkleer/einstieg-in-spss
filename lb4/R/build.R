@@ -26,7 +26,7 @@ dfGroup
 # get commits per repository
 main <- GET(
   paste0(
-    "https://gitlab.ub.uni-giessen.de/api/v4/projects/699/repository/contributors?private_token=",
+    "https://gitlab.ub.uni-giessen.de/api/v4/projects/809/repository/contributors?private_token=",
     token
   )
 )
@@ -44,6 +44,21 @@ for (i in 1:dim(main)[1]){
     }
   }
 }
+
+# adding oliver and old commits
+oliver <- list(
+  name = "Oliver Platt",
+  email = "oliver.platt@sowi.uni-giessen.de",
+  commits = 68,
+  additions = 0,
+  deletions = 0,
+  web_url = "https://gitlab.ub.uni-giessen.de/g32060",
+  avatar_url = "https://gitlab.ub.uni-giessen.de/uploads/-/system/user/avatar/630/avatar.png"
+)
+
+main <- rbind(main, oliver)
+
+main$commits[main$name == "B. Philipp Kleer"] <- main$commits[main$name == "B. Philipp Kleer"] + 74
 
 mainjson <- toJSON(
   main, 
