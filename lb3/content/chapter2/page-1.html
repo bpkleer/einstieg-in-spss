@@ -1,0 +1,65 @@
+---
+title: "Ein-Stichproben-T-Test"  # Titel der Seite
+weight: 201  # Individuelles Gewicht 
+menuTitle: "Ein-Stichproben-T-Test" # Falls Titel zulang ist, hier Kurztitel
+tags: ["Mittelwert", "Mittelwertvergleiche", "t-Test", "Nullhypothese", "Alternativhypothese", "Signifikanz", "Irrtumswahrscheinlichkeit", ]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+
+
+<p>{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-r/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}}</p>
+<p>{{% buttonGit href="https://twitter.com/share?url=" icon="fab fa-twitter" %}} {{% /buttonGit %}}</p>
+<p>{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}</p>
+<div id="mittelwerte-vergleichen" class="section level2">
+<h2>Mittelwerte vergleichen</h2>
+<p>Die zweite große Säule der Datenanalyse ist die Untersuchung von Unterschieden. Dabei werden Mittelwerte zweier oder mehrerer Gruppen verglichen. Dafür wird eine <strong>metrische Variable</strong> nach einer <strong>kategorialen Variable</strong> analysiert. So können wir untersuchen, ob eine bestimmte Populationsgruppe systematisch über andere Werte verfügt als eine andere Gruppe. Es gibt mehrere Arten des Mittelwertvergleiches. Diese haben je nach Stichprobenart und Variablenart unterschiedliche Charakteristika. Wir lernen in diesem Abschnitt folgende kennen:</p>
+<ul>
+<li><p>den <strong>Ein-Stichproben-t-Test</strong>,</p></li>
+<li><p>den <strong>Zwei-Stichproben-t-Test</strong> und</p></li>
+<li><p>den <strong>F-Test</strong>, auch <strong>ANOVA</strong> genannt.</p></li>
+</ul>
+</div>
+<div id="zur-erinnerung-interpretation-der-mittelwertvergleiche" class="section level2">
+<h2>Zur Erinnerung: Interpretation der Mittelwertvergleiche</h2>
+<p>Bei einem Mittelwertvergleich werden immer zwei Hypothesen aufgestellt.</p>
+<ul>
+<li><p>Die <strong>Hypothese <span class="math inline">\(H_1\)</span></strong> nimmt immer an, dass es einen <strong>Unterschied zwischen den Mittelwerten</strong> bei den Gruppen gibt.</p></li>
+<li><p>Die <strong>Hypothese <span class="math inline">\(H_0\)</span></strong>, oder auch <strong>Nullhypothese</strong>, nimmt immer das Gegenteil an, also dass es <strong>keinen Unterschied zwischen den Mittelwerten</strong> bei den Gruppen gibt.</p></li>
+</ul>
+<p>Wir gehen immer dann von einem Mittelwert<strong>unterschied</strong> aus, wenn wir die <strong>Nullhypothese <span class="math inline">\(H_0\)</span></strong> verwerfen können. Dafür müssen wir sicherstellen, dass der Unterschied zwischen den Gruppen so groß ist, dass wir nicht mehr vom Zufall ausgehen müssen. Dafür gibt es das Signfikanzmaß. Dieses bemisst <strong>die Irrtumswahrscheinlichkeit, dass die Nullhypothese falsch ist</strong>. Ist die Irrtumswahrscheinlichkeit unter einer vorher festgelegten Minimalgrenze, meistens sind das <span class="math inline">\(5%\)</span> (<span class="math inline">\(p &lt; 0.05\)</span>), können wir sagen, dass wir mit großer Sicherheit keinen Irrtum haben, wenn wir die Nullhypothese falsifizieren. Und wenn die Nullhypothese mit großer Sicherheit falsch ist, können wir von einem Mittelwert<strong>unterschied</strong> zwischen den Gruppen, der kein Zufall ist, ausgehen.</p>
+</div>
+<div id="ein-stichproben-t-test" class="section level2">
+<h2>Ein-Stichproben-t-Test</h2>
+<p>Der Einstichproben-t-Test wird berechnet, um zu testen, ob der empirische Wert signifikant vom wahren Wert <span class="math inline">\(\mu\)</span> abweicht. Dabei wird der Mittelwert einer Variable aus dem Datensatz mit einem bekannten Mittelwert <span class="math inline">\(\mu\)</span> verglichen. Die erste Gruppe ist also deine Variable im Datensatz. Diese wird mit dem Mittelwert einer zweiten Gruppe, die extern ist, verglichen.</p>
+<p>{{% expand "Welche Variablentypen sind also für diesen t-Test geeignet?" %}}
+Für diesen t-Test benötigen wir eine metrische Variable.
+{{% /expand %}}</p>
+<p>Du benötigst also Kenntnisse über <span class="math inline">\(\mu\)</span>. Nimm dafür an, dass das Statistikamt das offizielle Durchschnittsalter mit <span class="math inline">\(36.8\)</span> Jahren angibt.</p>
+<p>Welchen Wert nimmt das arithm. Mittel des Alters in unserem Datensatz an?
+Die Variable des Alters heißt <code>agea</code>.</p>
+<p>{{% expand "Überlege dir kurz, warum der Wert im Datensatz abweichen könnte!" %}}
+Im Datensatz wurden nur Personen ab 16 befragt. Somit ist klar, dass das Durchschnittsalter nach oben abweicht.
+{{% /expand %}}</p>
+<p>{{% tabs groupId="ttest1" %}}
+{{% tab name="Klickweg" %}}</p>
+<div class="float">
+<img src="../gif/ttest1.gif" alt="Klickweg" />
+<div class="figcaption">Klickweg</div>
+</div>
+<p>{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>T-TEST
+  /TESTVAL=36.8
+  /VARIABLES=agea.</code></pre>
+<p><code>T-TEST</code> ist der Hauptbefehl. Unter <code>/TESTVAL</code> kannst du das bekannte <span class="math inline">\(\mu\)</span> eingeben. Nach <code>/VARIABLES</code> definieren wir die Testvariable.</p>
+<p>{{% /tab %}}
+{{% tab name="Ergebnis" %}}</p>
+<div class="float">
+<img src="../img/ttest1.png" alt="Ergebnis" />
+<div class="figcaption">Ergebnis</div>
+</div>
+<p>Die wichtigste Teiltabelle ist die <strong>Test bei einer Stichprobe</strong>. Zum einen sehen wir hier die <strong>Mittlere Differenz</strong>. Das ist der Unterschied zwischen <span class="math inline">\(\mu\)</span> und dem Durchschnitt von <code>agea</code>. Der Mittelwert der Stichprobe liegt also um knapp 6 Jahre höher (<span class="math inline">\(agea_{Stichprobe} = 42.83\)</span>). Diese Abweichung ist signifikant (<span class="math inline">\(p &lt; 0.05\)</span>).</p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+<p>Gehen wir über zum t-Test für zwei Stichproben!</p>
+</div>
