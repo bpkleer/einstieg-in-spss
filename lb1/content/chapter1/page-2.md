@@ -7,10 +7,15 @@ tags: ["Fenster", "Skript", "Ausgabefenster", "Datenfenster", "Syntaxfenster"]  
 
 {{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
 
+{{% buttonGit href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonGit %}}
+
+{{% buttonGit href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonGit %}}
+
+{{% buttonGit href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonGit %}}
+
 {{% buttonGit href="https://twitter.com/share?url=" icon="fab fa-twitter" %}} {{% /buttonGit %}}
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
-
 Nun starten wir direkt mal mit SPSS. SPSS ist ein Programm, das sich für einen einfachen Einstieg in die Analyse und Erfassung quantitativer Daten eignet. Die Oberfläche bietet eine gute Lösung zum Organisieren eigener Projekte und Daten. Quantitative Daten erheben wir meistens mittels Fragebögen und Umfragen. Wir können mit SPSS auch Sekundärdatensätze analysieren. Das sind Daten, die von Forscher:innen bereits erhoben wurden und nun für die weiteren Analyse der wissenschaftlichen Community zur Verfügung gestellt werden. 
 
 Aber jetzt geht es erstmal los: Schalte deinen Computer an, logge dich ein und öffne mit einem Doppelklick SPSS! Wenn du von Zuhause aus SPSS mit einer Uni-Lizenz öffnen willst, denke daran, dass du vor dem Öffnen von SPSS eine VPN-Verbindung herstellen musst. Infos dazu findest du [hier](https://www.uni-giessen.de/de/fbz/svc/hrz/svc/netz/campus/vpn).
