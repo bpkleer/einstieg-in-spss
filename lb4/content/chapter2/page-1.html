@@ -1,0 +1,62 @@
+---
+title: "Multivariate lineare Regression"  # Titel der Seite
+weight: 201  # Individuelles Gewicht 
+menuTitle: "Multivariates Beispiel" # Falls Titel zulang ist, hier Kurztitel
+tags: ["regression", "multivariat"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+
+
+<p>{{% buttonShare href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-r/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonShare %}}</p>
+<p>{{% button href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /button %}}</p>
+<p>In der Regel berechnen wir keine bivariaten Modell in den Sozialwissenschaften, da Ursache-Wirkungs-Relationen in sozialen Phänomenen nie bivariat sind. Das vorherige Modell diente lediglich dazu, die lineare Regression besser zu verstehen. Doch jetzt können wir uns der Realität nähern und erweitern das Modell.</p>
+<p>Wir berechnen nun eine <strong>multivariate lineare Regression</strong>. Wir möchten die Variable <code>trstlgl</code> in das Modell einfügen. Schaue im Codebook nach, wofür diese Variable steht. Welchen Effekt erwartet wir theoretisch von der Variable <code>trstlgl</code>? Dazu schauen wir uns zuerst die Korrelation zwischen beiden Variablen an.</p>
+<p>{{% tabs groupID=“correlation” %}}
+{{% tab name="Klickweg" %}}
+<img src="../gif/corr.gif" alt="Klickweg" />
+{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>CORRELATIONS
+/VARIABLES stfdem trstlgl
+/PRINT=TWOTAIL NOSIG
+/MISSING=PAIRWISE.</code></pre>
+<p>{{% /tab %}}
+{{% tab name="Ergebnis" %}}
+<img src="../img/corr.png" alt="Korrelation" /></p>
+<p><span class="math inline">\(\Rightarrow\)</span> Der Korrelationswert zwischen <code>trstlgl</code> und <code>stfdem</code> zeigt uns an, dass eine negative Korrelation vorliegt, die aber nahe <span class="math inline">\(0\)</span> liegt, so dass man davon ausgehen kann, dass kein Zusammenhang zwischen den zwei Variablen vorliegt.
+{{% /tab %}}
+{{% /tabs %}}</p>
+<div id="erweitern-des-modells" class="section level3">
+<h3>Erweitern des Modells</h3>
+<p>Wir erweitern das Modell um die Variable <code>trstlgl</code>.</p>
+<p>{{% expand "Wie sieht unsere lineare Gleichung aus?" %}}</p>
+<p><span class="math display">\[Y = \beta_0 + \beta_1*X_1 + \beta_2*X_2 + e\]</span></p>
+<p><span class="math display">\[stfdem = \beta_0 + \beta_1*stfeco + \beta_2*trstlgl + e\]</span>
+{{% /expand %}}</p>
+<p>Dies setzen wir einfach in SPSS um:
+{{% tabs groupID=“multivariat” %}}
+{{% tab name="Klickweg" %}}
+<img src="../gif/multivariat.gif" alt="Klickweg" />
+{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>REGRESSION
+/MISSING LISTWISE 
+/STATISTICS COEFF R ANOVA CI(95)
+/NOORIGIN
+/DEPENDENT stfdem
+/METHOD=ENTER stfeco trstlgl.</code></pre>
+<p>Das einzige, was du zum vorherigen Code ändern musst, ist die Variable <code>trstlgl</code> in der letzten Zeile hinzuzufügen. Fertig und du kannst den Code ausführen lassen!
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}
+<img src="../img/results2.png" alt="Ergebnis" /></p>
+<p>Das Modell kann <span class="math inline">\(45.96 %\)</span> der Varianz in <code>stfdem</code> erklären. Mit jedem Anstieg in <code>stfeco</code> (Zufriedenheit mit der ökonomischen Leistung) steigt <code>stfdem</code> um <span class="math inline">\(0.874\)</span> Punkte. Mit jedem Anstieg im Vertrauen zum Rechtssystem (<code>trstlgl</code>) sinkt die Zufriedenheit mit der Demokratie um <span class="math inline">\(-0.042\)</span>. Beide Effekte sind signifikant (<span class="math inline">\(p&lt;0.05\)</span>). Um nun zu erschließen, welcher Effekt stärker auf die abhängige Variable wirkt, musst du dir die standardisierten Regressionskoeffizienten anschauen, denn die beiden Variablen haben nicht dieselbe Skala.</p>
+<p>Die standardisierten Koeffizienten sind wie folgt: <code>stfeco</code> <span class="math inline">\(0.678\)</span> und <code>trstlgl</code> <span class="math inline">\(-0.034\)</span>. Wir können daher sagen, dass der Effekt der Zufriedenheit mit der Wirtschaft deutlich stärker ist als der des Vertrauens in die Justiz (<span class="math inline">\(|0.678| &gt; |-0.034|\)</span>).
+{{% /tab %}}
+{{% /tabs %}}</p>
+<p>Du kannst also jetzt auch schon multivariate Modelle berechnen und weißt wie du diese interpretieren kannst! Jetzt fügen wir noch kategoriale Variablen hinzu!</p>
+</div>

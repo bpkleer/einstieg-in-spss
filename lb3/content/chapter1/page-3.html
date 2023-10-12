@@ -1,0 +1,215 @@
+---
+title: "Zusammenhangsmaße"  # Titel der Seite
+weight: 103  # Individuelles Gewicht 
+menuTitle: "Zusammenhangsmaße" # Falls Titel zulang ist, hier Kurztitel
+tags: ["zusammenhangsmaße", "chi-quadrat", "cramers v", "gamma", "erwartete Werte", "beobachtete Werte"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
+---
+
+
+
+<p>{{% buttonShare href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-r/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonShare %}}</p>
+<p>{{% buttonShare href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonShare %}}</p>
+<p>{{% button href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /button %}}</p>
+<p>Mit Zusammenhangsmaßen kannst du testen, ob und inwieweit zwei Variablen miteinander zusammenhängen. Als ein erstes Maß hast du in der Statistik-Vorlesung <span class="math inline">\(\chi^2\)</span> kennengelernt, das prüft, ob ein Zusammenhang zwischen zwei Variablen vorliegt. Als weiteres Maß für die Stärke eines Zusammenhangs kennst du Cramer’s V. Für die Berechnung der beiden Zusammenhangsmaße betrachten wir den Vergleich zwischen <strong>beobachten und erwarteten Werten</strong>.</p>
+<p><strong>Beobachtete Werte</strong> sind die Werte, die gemessen worden sind. <strong>Erwartete Werte</strong> sind die Werte, die wir erwarten, wenn <strong>kein Zusammenhang</strong> zwischen den beiden Variablen besteht. Was das genau ist, kannst du <a href="https://lehre.bpkleer.de/stats101/LM3/chapter1/page-1-a/">hier</a> nachschauen.</p>
+<p>{{% tabs groupId="erwartet" %}}
+{{% tab name="Klickweg" %}}</p>
+<div class="float">
+<img src="../gif/erwartet.gif" alt="Klickweg" />
+<div class="figcaption">Klickweg</div>
+</div>
+<p>{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>CROSSTABS
+  /TABLES=edu BY gndr
+  /CELLS=COUNT EXPECTED
+</code></pre>
+<p>Im Unterbefehl <code>/CELLS</code> können wir auch erwartete Werte anzeigen. <code>EXPECTED</code> ist der Parameter für die <strong>erwarteten Werte</strong></p>
+<p>{{% /tab %}}
+{{% tab name="Ergebnis" %}}</p>
+<div class="float">
+<img src="../img/erwartet.png" alt="Ergebnis" />
+<div class="figcaption">Ergebnis</div>
+</div>
+<p>In diesem Output siehst du nicht nur die beobachteten Werte unter <strong>Anzahl</strong>, sondern auch die erwarteten Werte unter <strong>erwartete Anzahl</strong></p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+<p>Aus der Abweichung der beobachteten Werte, also das was wir gemessen haben, und den erwarteten Werten, können wir auf <strong>statistische Abhängigkeit</strong> vermuten. Dieser Test auf einen Zusammenhang wird mit dem <span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest berechnet. Schauen wir uns diesen zuerst an.</p>
+<div id="chi2-unabhängigkeitstest" class="section level2">
+<h2><span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest</h2>
+<p>Der <strong><span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest</strong> gibt Auskunft, ob die ungleiche Verteilung statistisch signfikant ist.</p>
+<p>Die Nullhypothese des <span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest lautet:</p>
+<ul>
+<li><span class="math inline">\(H_0:\)</span> Variablen sind statistisch unabhängig.</li>
+</ul>
+<p>Ist das Signfikanzmaß unter einen gewissen Wert, meistens sind das 5%, können wir mit ziemlich großer Sicherheit den Irrtum ausschließen, wenn wir diese Hypothese verwerfen. Oder kurz: Dann können wir von einem statistischen Zusammenhang zwischen den Variablen ausgehen.</p>
+<p>{{% tabs groupId="chi" %}}
+{{% tab name="Klickweg" %}}</p>
+<div class="float">
+<img src="../gif/chi.gif" alt="Klickweg" />
+<div class="figcaption">Klickweg</div>
+</div>
+<p>{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>CROSSTABS
+  /TABLES=edu BY gndr
+  /STATISTICS=CHISQ
+  /CELLS=COUNT EXPECTED
+</code></pre>
+<p>Ein neuer Unterbefehl ist dazu gekommen <code>/STATISTICS</code>. Nach diesem Befehl können wir mit verschiedenen Parameter statisistische Maßzahlen anfordern, mit <code>CHISQ</code> zum Beispiel <span class="math inline">\(\chi^2\)</span>.
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}</p>
+<div class="float">
+<img src="../img/chi.png" alt="Ergebnis" />
+<div class="figcaption">Ergebnis</div>
+</div>
+<p>Neu ist hier die Tabelle <strong>Chi-Quadrat-Tests</strong>. Wir stellen Fest, dass <span class="math inline">\(\chi^2\)</span> größer als 0 ist. Es liegt also ein Unterschied zwischen den beobachteten und den erwarteten Häufigkeiten. Darüberhinaus ist <span class="math inline">\(p&lt;0.001\)</span>: Mit einer Irrtumswahrscheinlichkeit <span class="math inline">\(&lt;0.1%\)</span> (also statistisch signifikant auf einem <span class="math inline">\(0.1%\)</span> Niveau) können wir die Aussage treffen, dass das Geschlecht ungleich über den Schulabschluss verteilt ist.</p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+</div>
+<div id="annahmen-des-chi2-unabhängigkeitstest" class="section level2">
+<h2>Annahmen des <span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest</h2>
+<p>Die Berechnung des <span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest setzt zwei Annahmen voraus:</p>
+<ol style="list-style-type: decimal">
+<li>Mindestens <span class="math inline">\(10\)</span> Beobachtungen in jeder Zelle.</li>
+</ol>
+<p><span class="math inline">\(\Rightarrow\)</span> Kreuztabelle! (<span class="math inline">\(\checkmark\)</span>)</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Mindestens <span class="math inline">\(5\)</span> erwartete Beobachtungen in jeder Zelle.</li>
+</ol>
+<p>Der <span class="math inline">\(\chi^2\)</span>-Wert stellt die <strong>Summe der Quadrate der standardisierten Residuen</strong> dar, die über alle Felder der Kreutzabelle gebildet werden.</p>
+<p>{{% expand "Was waren noch einmal Residuen?" %}}
+Residuen sind die Differenz zwischen den tatsächlich beobachteten Werten und den vorhergesagten, erwarteten Werten.
+{{% /expand %}}</p>
+<p>Wenn <span class="math inline">\(\chi^2\)</span> den Wert <strong>Null</strong> hat, besteht <strong>kein Unterscheid</strong> zu den erwarteten Häufigkeiten.</p>
+<p>{{% expand "Überlege kurz: Warum ist das so?" %}}
+Wenn Chi-Quadrat gleich 0 ist, bedeutet dies, dass die Summe der Quadrate der standardisierten Residuen null ist. Somit existiert kein Unterschied zwischen erwarteten und beobachteten Werten.
+{{% /expand %}}</p>
+<p>Der <span class="math inline">\(\chi^2\)</span>-Test rechnet zusätzlich einen Signifikanzwert aus. Dieser drückt die Wahrscheinlichkeit aus, einen Fehler erster Art zu begehen: Also die Ablehnung der Nullhypothese, obwohl diese wahr ist. Die Konvention liegt bei <span class="math inline">\(5%\)</span> und daher werden Ergebnisse mit <span class="math inline">\(p &lt; 0.05\)</span> als signifikant bewertet, da hier der Fehler <span class="math inline">\(&lt;=5% (0.05)\)</span> ist.</p>
+</div>
+<div id="die-stärke-des-zusammenhangs" class="section level2">
+<h2>Die Stärke des Zusammenhangs</h2>
+<p>Bisher haben wir nur den <span class="math inline">\(\chi^2\)</span>-Unabhängigkeitstest durchgeführt. Aber neben dem generellen Zusammenhang ist oftmals von Interesse, wie stark dieser Zusammenhang ist bzw. in welche Richtung dieser Zusammenhang geht. Dafür gibt es weitere Maßzahlen. Aufgrund der mathematischen Eigenschaften der verschiedenen Skalenniveaus, gibt es <strong>je Skalenniveau unterschiedliche Zusammenhangsmaße</strong>.</p>
+<div class="float">
+<img src="../img/zusammenhang.png" alt="Zusammenhang" />
+<div class="figcaption">Zusammenhang</div>
+</div>
+<ol style="list-style-type: decimal">
+<li><p>Für den Zusammenhang zwischen <strong>nominalen Variablen</strong> nutzen wir <strong>Cramer’s V</strong>.</p></li>
+<li><p>Für den Zusammenhang zwischen <strong>ordinalen Variablen</strong> nutzen wir <strong>Gamma</strong>.</p></li>
+<li><p>Für den Zusammenhang zwischen <strong>metrischen Variablen</strong> nutzen wir <strong>Pearson’s R</strong>.</p></li>
+</ol>
+</div>
+<div id="cramers-v" class="section level2">
+<h2>Cramer’s V</h2>
+<p>Wir berechnen <strong>Cramer’s V</strong> für die Stärke des Zusammenhangs zwischen zwei mindestens nominalskalierten Variablen. Cramer’s V:</p>
+<ul>
+<li><p>nimmt <strong>Werte zwischen 0 und 1</strong> an,</p></li>
+<li><p>und gibt uns die <strong>Stärke eines Zusammenhanges</strong> aus.</p></li>
+</ul>
+<p>Also genau das, was wir mit <span class="math inline">\(\chi^2\)</span> nicht machen konnten, super!</p>
+<p>Für die Interpretation der <strong>Stärke des Zusammenhanges</strong> gelten folgende Grenzen:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">unteres Ende</th>
+<th align="center">oberes Ende</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(0.1\)</span></td>
+<td>kein Zusammenhang</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(0.1\)</span></td>
+<td align="center"><span class="math inline">\(0.3\)</span></td>
+<td>gering</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(0.3\)</span></td>
+<td align="center"><span class="math inline">\(0.6\)</span></td>
+<td>mittel</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(0.6\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td>stark</td>
+</tr>
+</tbody>
+</table>
+<p>{{% tabs groupId="cramers" %}}
+{{% tab name="Klickweg" %}}</p>
+<div class="float">
+<img src="../gif/cramers.gif" alt="Klickweg" />
+<div class="figcaption">Klickweg</div>
+</div>
+<p>{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>CROSSTABS
+  /TABLES=edu BY gndr
+  /STATISTICS=CHISQ PHI
+  /CELLS=COUNT EXPECTED
+</code></pre>
+<p>Mit dem Parameter <code>PHI</code> fordern wir Cramer’s V an. <span class="math inline">\(\phi\)</span> (Phi) ist ein Spezialfall von Cramer’s V auf 2x2 Kreuztabellen.
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}</p>
+<div class="float">
+<img src="../img/cramers.png" alt="Ergebnis" />
+<div class="figcaption">Ergebnis</div>
+</div>
+<p>Cramer’s V beträgt <span class="math inline">\(0.099\)</span>. Es liegt also ein sehr schwacher Zusammenhang vor, der auf <span class="math inline">\(0.1%\)</span> Niveau signifikant ist.</p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+</div>
+<div id="gamma" class="section level2">
+<h2>Gamma</h2>
+<p>Als nächstes ist Gamma an der Reihe. Für die Berechnung von Gamma benötigst du mindestens <strong>ordinalskalierte Variablen</strong>. Gamma hat eine andere Konzeption als Cramer’s V. Für Gamma gilt:</p>
+<ul>
+<li><p>Es nimmt <strong>Werte zwischen 0 und 1</strong> an,</p></li>
+<li><p>gibt die <strong>Stärke eines Zusammenhanges</strong> aus</p></li>
+<li><p><strong>und</strong> gibt die <strong>Richtung des Zusammenhanges</strong> an.</p></li>
+</ul>
+<p>Letzteres bedeutet, dass unsere Werte nun ein <strong>Vorzeichen beinhalten</strong>. Ist</p>
+<ul>
+<li><p><span class="math inline">\(\gamma\)</span> = +1, handelt es sich um einen <strong>perfekten positiven Zusammenhang</strong>,</p></li>
+<li><p><span class="math inline">\(\gamma\)</span> = 0, handelt es sich um <strong>keinen Zusammenhang</strong>,</p></li>
+</ul>
+<p>-* <span class="math inline">\(\gamma\)</span> = -1, handelt es sich um einen <strong>perfekten negativen Zusammenhang</strong>.</p>
+<p><strong>Positive Werte</strong> bedeuten, dass ein hoher (numerischer) Wert bei der einen Variable mit einem hohen (numerischen) Wert bei der anderen Variable korresponidert. <strong>Negative Werte</strong> bedeuten, dass ein hoher (numerischer) Wert bei der einen Variable mit einem niedrigen (numerischen) Wert bei der anderen Variable korresponidert.</p>
+<p>{{% expand "Was ist, wenn zwei niedrige numerische Werte in einer Verbindung zeinander stehen?" %}}
+Richtig, auch dann handelt es sich um einen <strong>positiven Zusammenhang</strong>. Es geht also um das gleiche Verhältnis.
+{{% /expand %}}</p>
+<p>Zusätzlich erhalten wir ebenfalls einen Signfikanzwert. Schauen wir uns an, wie das in SPSS funktioniert.</p>
+<p>{{% tabs groupId="gamma" %}}
+{{% tab name="Klickweg" %}}</p>
+<div class="float">
+<img src="../gif/gamma.gif" alt="Klickweg" />
+<div class="figcaption">Klickweg</div>
+</div>
+<p>Für dieses Beispiel nehmen wir zwei ordinal-skalierte Variablen: Das Einkommen in Dezilen und den Schulabschluss.</p>
+<p>{{% /tab %}}
+{{% tab name="Syntax" %}}</p>
+<pre class="spss"><code>CROSSTABS
+  /TABLES=income BY edu
+  /STATISTICS=CHISQ GAMMA
+  /CELLS=COUNT EXPECTED
+</code></pre>
+<p>Mit dem Parameter <code>GAMMA</code> fordern wir <span class="math inline">\(\gamma\)</span> an.
+{{% /tab %}}
+{{% tab name="Ergebnis" %}}</p>
+<div class="float">
+<img src="../img/gamma.png" alt="Ergebnis" />
+<div class="figcaption">Ergebnis</div>
+</div>
+<p>Gamma beträgt <span class="math inline">\(0.527\)</span>. Es liegt also ein mittlerer Zusammenhang vor, der auf <span class="math inline">\(0.1%\)</span> Niveau signifikant ist.</p>
+<p>{{% /tab %}}
+{{% /tabs %}}</p>
+<p>Super, die ersten beiden Zusammenhangsmaße hast du geschafft, machen wir jetzt mit Pearson’s R weiter!</p>
+</div>
