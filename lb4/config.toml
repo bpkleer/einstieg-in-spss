@@ -26,22 +26,22 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-chalkboard-teacher'></i> Lernblock 1"
-  url = "https://ilias.uni-giessen.de/data/JLUG/lm_data/lm_746771/lb1/index.html"
+  url = "../lb1/index.html"
   weight = 10
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-chalkboard-teacher'></i> Lernblock 2"
-  url = "https://ilias.uni-giessen.de/data/JLUG/lm_data/lm_746771/lb2/index.html"
+  url = "../lb2/index.html"
   weight = 20
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-chalkboard-teacher'></i> Lernblock 3"
-  url = "https://ilias.uni-giessen.de/data/JLUG/lm_data/lm_746771/lb3/index.html"
+  url = "../lb3/index.html"
   weight = 30
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-chalkboard-teacher'></i> Lernblock 4"
-  url = "https://ilias.uni-giessen.de/data/JLUG/lm_data/lm_746771/lb4/index.html"
+  url = "/index.html"
   weight = 40
 
 [[menu.shortcuts]]
