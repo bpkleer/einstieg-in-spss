@@ -1,6 +1,6 @@
 # Einstieg In SPSS
 
-## v1.0 (05/02/2023)
+## v2.0 (10/12/2023)
 
 ## Projektziel
 Praktische Kenntnisse in der Anwendung statistischer Methoden nehmen in sozialwissenschaftlichen Studiengängen eine wichtige Rolle ein. Diese praktischen Kenntnisse in spezifischen Statistik-Programmen haben für die an das Studium anschließende Berufstätigkeit oder eine weiterführende wissenschaftliche Karriere eine wichtige Funktion im Bachelor- wie Masterstudium. Nicht zuletzt wird durch die Vermittlung dieser praktischen Kenntnisse neben den theoretischen Kenntnissen aus möglichen Statistikvorlesungen die Employability von Studierenden aus sozialwissenschaftlichen Bachelor- wie Masterstudiengängen gesteigert. 
