@@ -9,15 +9,15 @@ Thumbs.db
 
 **/.DS_Store
 .DS_Store
-/lm1/public/
-/lm2/public/
-/lm3/public/
-/lm4/public/
+/lb1/public/
+/lb2/public/
+/lb3/public/
+/lb4/public/
 /main/public/
 
-/lm1/content/**/*.html
-/lm2/content/**/*.html
-/lm3/content/**/*.html
-/lm4/content/**/*.html
+/lb1/content/**/*.html
+/lb2/content/**/*.html
+/lb3/content/**/*.html
+/lb4/content/**/*.html
 /main/content/**/*.html
 
