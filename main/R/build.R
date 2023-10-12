@@ -33,6 +33,7 @@ main <- GET(
 
 main <-  fromJSON(rawToChar(main$content))
 
+main$name[main$name=="B. Philipp Kleer"] <- "Philipp Kleer"
 main$web_url <- NA_character_
 main$avatar_url <- NA_character_
 
@@ -58,7 +59,7 @@ oliver <- list(
 
 main <- rbind(main, oliver)
 
-main$commits[main$name == "B. Philipp Kleer"] <- main$commits[main$name == "B. Philipp Kleer"] + 74
+main$commits[main$name == "Philipp Kleer"] <- main$commits[main$name == "Philipp Kleer"] + 74
 
 mainjson <- toJSON(
   main, 
