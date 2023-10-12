@@ -17,6 +17,8 @@ tags: ["Anova", "F-Test", "Varianzgleichheit", "Levene-Test", "Bonferroni"]  # T
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 Auf dieser Seite werden Mittelwertvergleiche zwischen mehr als zwei Gruppen vorgestellt. Diese Test-Statistik wird (einfaktorielle) **ANOVA** oder **F-Test** genannt. Wir möchten nun die verschiedenen Gruppen der `edu`-Variable testen. 
 
 ### Hypothesen des F-Tests

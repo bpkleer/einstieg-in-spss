@@ -17,6 +17,8 @@ tags: ["Grafik", "Histogramm", "Normalverteilung", "Kurtosis", "Schiefe", "Boxpl
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 ## Darstellung Histogramm mit Normalverteilungskurve
 
 Ein **Histogramm** setzt auf der X-Achse gleichbleibende Abstände voraus. Daher ist es zu empfehlen, hier Variablen mit **metrischem Skalenniveau** zu verwenden. Daher kannst du hier nicht wie beim Säulendiagramm die Reihenfolge der Balken mit `/FORMATS` frei bestimmen.

@@ -17,6 +17,8 @@ tags: ["Univariate Statistik", "Streumaße", "DESCRIPTIVES", "FREQUENCIES"]  # T
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 ## Grundlegende Kenngrößen der Streumaße
 
 Die meisten Streumaße beziehen sich auf das **arithmetische Mittel**. Sie geben relativ zum arithemtischen Mittel an, wie weit alle Fälle im Durchschnitt vom Mittelwert abweichen. Weil das arithemtische Mittel eine wichtige Voraussetzung ist, benötigst du für Streumaße streng genommen mindestens das **metrische Skalenniveau**.

@@ -17,6 +17,8 @@ tags: ["regression", "bivariat", "regressionskoeffizienten", "p-wert"]  # Tags h
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 {{% attachments style=\"grey\" title=\"Datensatz\" /%}}
 
 Wir nutzen jetzt wieder den Datensatz **PSS**, den wir schon während des gesamten Lernmoduls genutzt haben. Wir möchten nun testen, inwieweit die Zufriedenheit mit der ökonomischen Leistung die Zufriedenheit mit der Demokratie erklärt. Wir gehen also davon aus, dass die Zufriedenheit mit der ökonomischen Leistung die Zufriedenheit mit der Demokratie beeinflusst. 

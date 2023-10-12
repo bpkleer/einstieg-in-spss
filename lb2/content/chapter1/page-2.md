@@ -17,6 +17,8 @@ tags: ["Daten", "Dateiendungen", ".txt", ".csv", "Datenimport", "GET DATA"]  # T
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Als erstes werden wir globale Datensatz-Dateiformate importieren. Dies sind `.txt` und `.csv` wie du auf der letzten Seite sehen konntest. 
 
 {{%attachments style=\"grey\" title=\"Datensatz\" /%}}

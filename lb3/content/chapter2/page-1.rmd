@@ -17,6 +17,8 @@ tags: ["Mittelwert", "Mittelwertvergleiche", "t-Test", "Nullhypothese", "Alterna
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 ## Mittelwerte vergleichen
 Die zweite große Säule der Datenanalyse ist die Untersuchung von Unterschieden. Dabei werden Mittelwerte zweier oder mehrerer Gruppen verglichen. Dafür wird eine **metrische Variable** nach einer **kategorialen Variable** analysiert. So können wir untersuchen, ob eine bestimmte Populationsgruppe systematisch über andere Werte verfügt als eine andere Gruppe. Es gibt mehrere Arten des Mittelwertvergleiches. Diese haben je nach Stichprobenart und Variablenart unterschiedliche Charakteristika. Wir lernen in diesem Abschnitt folgende kennen:
 

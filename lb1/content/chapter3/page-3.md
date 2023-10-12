@@ -17,6 +17,8 @@ tags: ["SORT", "SPLIT FILE"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite 
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 In manchen Fällen wollen wir uns verschiedene Subgruppen gleichzeitig anschauen. Dafür bietet SPSS einen Befehl an, der bei jeder Analyse das Ergebnis nach den verschiedenen Subgruppen, die uns interessieren, sortiert ausgibt.
 
 ### Der Syntax-Befehl

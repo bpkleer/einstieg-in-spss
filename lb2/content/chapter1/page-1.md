@@ -17,6 +17,8 @@ tags: ["Daten", "Dateiendungen", "Speicherung", ".sav", ".txt", ".csv"]  # Tags 
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Wie bereits in Lernblock 1 besprochen, haben Dateien immer **Dateiendungen**, die auf das Lese-/Schreibformat hinweisen. Dies waren zur Erinnerung zum Beispiel `.docx` für Word-Dateien oder `.pptx` für Powerpoint-Dateien. 
 
 Für Datensätze gibt es globale Dateiformate, die von den meisten Programmen gelesen werden können, aber auch programmspezifische Dateiformate. Für SPSS kennen wir ja schon das programmspezifische Dateiformat `.sav`. So wird auch das **Datenfenster** in SPSS gespeichert.

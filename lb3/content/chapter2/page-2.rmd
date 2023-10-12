@@ -17,6 +17,8 @@ tags: ["mittelwert", "mittelwertvergleiche", "t-Test"]  # Tags hiereinsetzen; Ku
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 Beim Zwei-Stichproben t-Test musst du unterscheiden, ob es sich um gepaarte oder ungepaarte Stichproben handelt. Aber was heißt das nochmal, wenn eine Stichprobe gepaart bzw. abhängig oder ungepaart bzw. unabhängig ist?
 
 **Ungepaart** ist eine Stichprobe, wenn keine Zuordnungen zwischen den Fällen möglich ist. Vereinfacht gesagt heißt das, dass das jeder Fall im Datensatz ausschließlich eine befragte Person repräsentiert und ausschließlich einmal im Datensatz vorkommt.

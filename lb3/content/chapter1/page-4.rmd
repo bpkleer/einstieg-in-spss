@@ -17,6 +17,8 @@ tags: ["korrelationen", "Pearson's R", "Spearman's Rho", "Linearität"]  # Tags 
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 Machen wir weiter mit **Pearson's R**. Eine Korrelation nach Pearson's R beschreibt in erster Linie einen **linearen Zusammenhang** zwischen zwei Variablen. Aber nicht vergessen: **Eine Korrelation trifft keine Aussage zur Kausalität**. Ein Korrelationskoeffizient misst nur, ob sich zwei Merkmale im linearen Gleichklang bewegen.
 
 Für die Berechnung von **Pearson's r** müssen folgende Bedingungen erfüllt sein: 

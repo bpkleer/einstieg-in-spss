@@ -16,6 +16,9 @@ tags: ["Daten", "Dateiendungen", ".sav", "Datenimport", "GET"]  # Tags hiereinse
 {{% buttonGit href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonGit %}}
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 {{%attachments style=\"grey\" title=\"Datensatz\" /%}}
 
 Wie du schon gelernt hast, ist `.sav` die Endung von Datendateien in SPSS. Wenn du noch einmal nachschauen willst, was das ist, musst du [hier](https://lehre.bpkleer.de/spss101/lb1/chapter1/page-2/) klicken. So speicherst du auch das Datenfenster samt Datenansicht (die eigentliche Datentabelle) und Variablenansicht (das Datengerüst mit spezifischen Informationen zu den Daten) ab. Dem entsprechend ist es auch super einfach, `.sav`-Dateien in SPSS zu laden. Dann fangen wir mal an!

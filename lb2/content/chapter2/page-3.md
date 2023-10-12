@@ -17,6 +17,8 @@ tags: ["Indizes", "COMPUTE", "Subtraktion", "Addition", "Variablenbenennung"]  #
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Manche Umcodierungen können wir nicht durchführen, indem wir die Reihenfolge der Ausprägungen ändern oder diese durchführen. Manchmal wollen wir eine neue Variable aus einer alten berechnen. Das machen wir oft bei **Indizes**. 
 
 ## Exkurs: Indizes

@@ -17,6 +17,8 @@ tags: ["regression", "multivariat"]  # Tags hiereinsetzen; Kurzwort, was auf der
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 In der Regel berechnen wir keine bivariaten Modell in den Sozialwissenschaften, da Ursache-Wirkungs-Relationen in sozialen Phänomenen nie bivariat sind. Das vorherige Modell diente lediglich dazu, die lineare Regression besser zu verstehen. Doch jetzt können wir uns der Realität nähern und erweitern das Modell.
 
 Wir berechnen nun eine **multivariate lineare Regression**. Wir möchten die Variable `trstlgl` in das Modell einfügen. Schaue im Codebook nach, wofür diese Variable steht. Welchen Effekt erwartet wir theoretisch von der Variable `trstlgl`? Dazu schauen wir uns zuerst die Korrelation zwischen beiden Variablen an.

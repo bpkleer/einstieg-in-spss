@@ -17,6 +17,8 @@ tags: ["Univariat", "Häufigkeiten", "FREQUENCIES"]  # Tags hiereinsetzen; Kurzw
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 ## Deskriptive Häufigkeiten auszählen
 
 {{%attachments style=\"grey\" title=\"Datensatz\" /%}}

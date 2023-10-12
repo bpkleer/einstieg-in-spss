@@ -17,6 +17,8 @@ tags: ["Datenansicht" , "Datentabellen", "Dateneingabe", "Primärdaten", "userde
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Wir haben nun das Datengerüst geschaffen und machen nun mit dem zweiten Schritt weiter. Wechseln wir dafür in die **Datenanischt**.
 
 ![Wechsel in die Datenansicht](../gif/datenansicht1.gif)

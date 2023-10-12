@@ -17,6 +17,8 @@ tags: ["regression", "basics regression", "gleichung regression"]  # Tags hierei
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 Mit einer **linearen Regression** schätzen wir die kausale Beziehung zwischen mehreren unabhängigen Variablen und einer abhängigen Variable. Das Modell wird i.d.R. mit dem Verfahren  *Ordinary-Least-Squares* (OLS) geschätzt und so erhalten wir den besten linearen Schätzer (*Best Linear Unbiased Estimator - BLUE*). Dies gilt aber nur sofern die Annahmen der linearen Regression zutreffen.
 
 Basierend auf theoretischen Annahmen oder empirischer Evidenz anderer Forscher:innen (*state of the art*) schätzen wir ein Modell. Die unabhängigen Variablen werden oftmals geteilt in Kontrollvariablen und Variablen, über die wir theoretische Annahmen testen möchten. 

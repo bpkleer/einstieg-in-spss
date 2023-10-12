@@ -17,6 +17,8 @@ tags: ["Syntax", "Befehle", "Frequencies", "Kommentare", "Hilfe", "Befehlssyntax
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Schauen wir uns nun ein anderes Fenster von SPSS an - das Syntaxfenster. 
 
 {{% expand \"Welche Funktion hatte nochmal das Syntaxfenster? Mit welchem Dateiformat kann es gespeichert werden?\" %}}

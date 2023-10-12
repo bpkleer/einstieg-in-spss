@@ -17,6 +17,8 @@ tags: ["FILTER"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Manchmal möchten wir nicht mit allen Fällen eines Datensatzes arbeiten. Das ist zum Beispiel oft bei der Analyse von bestimmten Bevölkerungsgruppen der Fall. In diesen Fällen filtern wir unsere Daten vor der Analyse. So können wir Fälle, die wir für unsere Analyse nicht benötigen, temporär weglassen. Dafür müssen wir einen **Filter** verwenden.
 
 {{% expand \"Schau dir nochmal das Codebuch von Panem an. Nach welchen Kriterien könnten wir filtern?" %}}

@@ -17,6 +17,9 @@ tags: ["kreuztabellen", "relative Häufigkeiten", "Prozentuierung"]  # Tags hier
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
+
 Eine Kreuztabelle gibt Auskunft über eine bivariate Verteilung, also über die Verteilung auf zwei Variablen. Wenn wir relative Häufigkeiten untersuchen wollen, müssen wir zuerst das Relativ bestimmen, auf das sich die Prozentwerte beziehen. Wir definieren sozusagen die 100%, auf die sich die einzelne Zelle beziehen soll. Es gibt hierbei drei zentrale möglichkeiten:
 
 1. Prozentwerte bezogen auf die **Zeilenvariable**

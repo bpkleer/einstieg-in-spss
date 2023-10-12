@@ -17,6 +17,8 @@ tags: ["regression", "kategorial", "dichotom"]  # Tags hiereinsetzen; Kurzwort, 
 
 {{% buttonGit href=\"https\:\/\/www.facebook.com\/sharer\/sharer.php?u=\" icon=\"fab fa-facebook\" %}} {{% /buttonGit %}}
 
+{{% buttonGit href=\"https\:\/\/bmc.link\/bpkleerw\" icon=\"fa-solid fa-beer-mug-empty\" %}} {{% /buttonGit %}}
+
 In den Sozialwissenschaften nutzen wir oftmals Variablen mit nominalem oder ordinalem Skalenniveau. Diese können wir auch in das **lineare Regressionsmodell** als unabhängige Variable hinzufügen. Wir müssen nur verstehen, welchen zusätzlichen Effekt wir berechnen. Wir müssen *Dummy*-Variablen kreieren, die den Unterschied einer Ausprägung auf der Variablen in Referenz zu einer anderen Ausprägung angeben (Referenzkategorie). 
 
 Wir möchten die Variable `gndr` mit in unser Modell aufnehmen (*female*/*male*). Welche theoretische Annahme können wir über den Effekt treffen?

@@ -16,6 +16,9 @@ tags: ["Datengerüst" , "Variablenansicht", "Primärdaten", "Dateneingabe"]  # T
 {{% buttonGit href="https://twitter.com/share?url=" icon="fab fa-twitter" %}} {{% /buttonGit %}}
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Bevor wir nun die einzelnen Variablen eingeben, erstellen wir das Datengerüst in SPSS. 
 
 Variablen können verschiedene Eigenschaften haben. Dazu bietet das SPSS **Datenfenster** eine umfassende Ansicht. Du kannst sie jederzeit hinzufügen und verschieben. Für deine eigene Übersicht ist es aber besser, wenn du das in einer sinnvollen Reihenfolge machst.

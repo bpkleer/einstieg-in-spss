@@ -17,6 +17,8 @@ tags: ["Univariate Statistik", "Lagemaße", "DESCRIPTIVES", "FREQUENCIES"]  # Ta
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Jetzt können wir unsere Variablen so bearbeiten, dass wir sie auch statistisch untersuchen können. Fangen wir deshalb mit der deskriptiven Statistik an. **Lagemaße** und **Streumaße** sind statistische Maßzahlen, die die **univariate Verteilung** beschreiben. Univariat meint dabei, dass wir uns immer nur eine Variable einzeln anschauen. Verteilung meint dabei, dass wir die Häufigkeiten je nach Ausprägung der Variable betrachten. Diese Maßzahlen versuchen dabei, Strukturen dieser Verteilung der Häufigkeiten bei einer Variable quantitativ zu beschreiben.
 
 ## Lagemaße vs. Streumaße

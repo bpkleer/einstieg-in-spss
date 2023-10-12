@@ -17,6 +17,8 @@ tags: ["Kreuztabellen", "Randhäufigkeit", "absolute Häufigkeiten"]  # Tags hie
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Bevor du dich an die Berechnung von Zusammenhangsmaßen machst, erstellst du zuerst Tabellen, damit wir bivariate Verteilungen untersuchen können. Durch die Kreuztabelle lassen sich bereits mögliche vermutete Zusammenhänge zwischen zwei Variablen sichtbar machen. Dies ist auch für die grafische Darstellung relevant. Üblicherweise verwenden wir **kategoriale und/oder ordinale Variablen** für die Kreuztabellen. Bei metrischen Variablen gibt es schlichtweg zu viele Zeilen, Spalten und Zellen, um diese sinnvoll zu interpretieren. Daher werden metrische Variablen vor der Darstellung in einer Kreuztabelle oft gruppiert: Zum Beispiel wird das Alter in Altersgruppen rekodiert. 
 
 Für eine einfache Kreutzabelle arbeiten wir mit dem `CROSSTABS`-Befehl. Schau dir diesen Screenshot an. Wie würdest du die Kreuztabelle beschreiben?

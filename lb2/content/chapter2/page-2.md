@@ -17,6 +17,8 @@ tags: ["Umcodieren", "Umpolung", "RECODE", "Variablenbeschriftung", "VARIABLE LA
 
 {{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
 
+{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+
 Nachdem wir uns die Variablen unseres Datensatzes angeschaut haben, wissen wir wichtige Eigenschaften über deren Aufbau. Oft stellen wir jedoch fest, dass unsere Variable anders erhoben wurde als wir sie benötigen. Das kann zum einen **mathematische Gründe** haben. Zum Beispiel können wir mit unserer Ausgangsvariable nicht das statistische Verfahren durchführen, was wir uns vorgenommen haben. Weiterhin ist denkbar, dass die Interpretation statistischer Kennzahlen durch die vorliegende Variablenform unmöglich ist. Zum anderen kann es auch **inhaltliche, theoretische Gründe** geben. Manchmal wollen wir einen variablenübergreifenden Index bilden oder verschiedene Ausprägungen zusammenfassen. Solche Operationen bereiten also die eigentlichen deskriptiven Analysen vor. Die zwei wichtigsten Befehle dafür sind die Befehle `RECODE` und `COMPUTE`.
 
 ## Der `RECODE`-Befehl
