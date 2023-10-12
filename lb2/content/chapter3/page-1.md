@@ -5,19 +5,19 @@ menuTitle: "kategoriale Variable" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Grafik", "Kreisdiagramm", "Säulendiagramm", "Kategoriale Variablen"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
-{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+{{% buttonShare href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonShare %}} 
 
-{{% buttonGit href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonGit %}}
+{{% buttonShare href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+{{% button href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /button %}}
 
 Bestimmt hast du oft das Gefühl, dass du mit den errechneten Zahlen nichts anfangen kannst. Sie sind oft nicht intuitiv interpretierbar und müssen durch viel Text erklärt werden. Daher ist es eine wichtige Kompetenz, mathemtische Ergebnisse grafisch darstellen zu können. Sie lösen das Problem. Sie sind intuitiver interpretierbarer und fassen Ergebnisse einfach zusammen. Hier lernen wir drei Grafiktypen kennen, die wir einfach in SPSS erstellen lassen können. Für **kategoriale Variablen**, also Variablen die *nominal* oder *ordinal* sind, eignet sich das **Kreisdiagramm** und das **Säulendiagramm**. Für **metrische Variablen** eignet sich das **Histogramm** gut. Ebenso können **Boxplots** die verschiedenen deskriptiven Maße bei **metrischen Variablen** gut darstellen. Wieso wir hier wieder beim Skalenniveau unterscheiden müssen, liegt an der Anlage des Diagramms. Wir gehen darauf gleich näher ein. 
 

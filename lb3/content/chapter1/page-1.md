@@ -5,19 +5,19 @@ menuTitle: "Kreuztabellen" # Falls Titel zulang ist, hier Kurztitel
 tags: ["Kreuztabellen", "Randhäufigkeit", "absolute Häufigkeiten"]  # Tags hiereinsetzen; Kurzwort, was auf der Seite passsiert
 ---
 
-{{% buttonGit href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonGit %}} 
+{{% buttonShare href="https://gitlab.ub.uni-giessen.de/methoden-politik/einstieg-in-spss/issues/new?issue[title]=" icon="fas fa-bug" %}} {{% /buttonShare %}} 
 
-{{% buttonGit href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonGit %}}
+{{% buttonShare href="mailto:?subject=Schau%20dir%20das%20mal%20an%3A%20" icon="fas fa-paper-plane" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://t.me/share/url?url=" icon="fab fa-telegram" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://api.whatsapp.com/send?text=" icon="fab fa-whatsapp" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://twitter.com/share?url=" icon="fab fa-x-twitter" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonGit %}}
+{{% buttonShare href="https://www.facebook.com/sharer/sharer.php?u=" icon="fab fa-facebook" %}} {{% /buttonShare %}}
 
-{{% buttonGit href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /buttonGit %}}
+{{% button href="https://bmc.link/bpkleerw" icon="fa-solid fa-beer-mug-empty" %}} {{% /button %}}
 
 Bevor du dich an die Berechnung von Zusammenhangsmaßen machst, erstellst du zuerst Tabellen, damit wir bivariate Verteilungen untersuchen können. Durch die Kreuztabelle lassen sich bereits mögliche vermutete Zusammenhänge zwischen zwei Variablen sichtbar machen. Dies ist auch für die grafische Darstellung relevant. Üblicherweise verwenden wir **kategoriale und/oder ordinale Variablen** für die Kreuztabellen. Bei metrischen Variablen gibt es schlichtweg zu viele Zeilen, Spalten und Zellen, um diese sinnvoll zu interpretieren. Daher werden metrische Variablen vor der Darstellung in einer Kreuztabelle oft gruppiert: Zum Beispiel wird das Alter in Altersgruppen rekodiert. 
 
